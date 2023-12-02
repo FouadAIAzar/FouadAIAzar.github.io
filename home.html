@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Fouad Azar</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta charset="UTF-8">
+            <link href="./homestyles.css" rel="stylesheet">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap" rel="stylesheet">
+            <link rel="shortcut icon" href="./favicon_io/favicon-32x32.png" type="image/x-icon">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="landing-page">
+            <div id="particle-container"></div>
+            <div id="title-container">
+                <h1 id="titular" class="aesthetic"><a href="home.html">Fouad Azar</a></h1>
+            </div>
+            <a href="TheUh.html"><div id="musician">
+                   The<br>
+                    Musician
+            </div></a>
+            <a href="resume.html"><div id="engineer">
+                The<br>
+                 Engineer
+         </div></a>
+        </div>
+    </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="particleHome.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+    // linear interpolation between two values a and b
+    // u controls amount of a/b and is in range [0.0,1.0]
+    lerp = function(a,b,u) {
+        return (1-u) * a + u * b;
+    };
+
+    fade = function( property, start, end, duration) {
+    var interval = 10;
+    var steps = duration/interval;
+    var step_u = 1.0/steps;
+    var u = 0.0;
+    var theInterval = setInterval(function(){
+        if (u >= 1.0){ clearInterval(theInterval) }
+        var r = parseInt(lerp(start.r, end.r, u));
+        var g = parseInt(lerp(start.g, end.g, u));
+        var b = parseInt(lerp(start.b, end.b, u));
+        var colorname = 'rgb('+r+','+g+','+b+')';
+        document.documentElement.style.setProperty(property,colorname);
+        u += step_u;
+    }, interval);
+    };
+
+    function hexToRgb(hex) {
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16)
+        } : null;
+    }
+
+    
+    
+</script>        
+<script>
+    let musician = document.getElementById("musician");
+    musician.addEventListener("mouseenter", colorChange)
+    musician.addEventListener("mouseout", colorChange2)
+    function colorChange(){
+        docStyle = getComputedStyle(document.documentElement);
+        
+        rgb = docStyle.getPropertyValue('--text-default');
+    
+        rgb = rgb.substring(4, rgb.length-1)
+        .replace(/ /g, '')
+        .split(',');
+    
+        r1 = rgb[0];
+        g1 = rgb[1];
+        b1 = rgb[2];
+    
+        startColor = {r: r1, g: g1, b: b1};  // text
+        endColor   = {r: 255-r1, g: 255-g1, b: 255-b1};  // background
+        fade("--text-color",startColor,endColor,500);
+        fade("--background-color",endColor,startColor,500);
+    }
+    function colorChange2(){
+        docStyle = getComputedStyle(document.documentElement);
+        
+        rgb = docStyle.getPropertyValue('--back-default');
+    
+        rgb = rgb.substring(4, rgb.length-1)
+        .replace(/ /g, '')
+        .split(',');
+    
+        r1 = rgb[0];
+        g1 = rgb[1];
+        b1 = rgb[2];
+    
+        startColor = {r: r1, g: g1, b: b1};  // text
+        endColor   = {r: 255-r1, g: 255-g1, b: 255-b1};  // background
+        fade("--text-color",startColor,endColor,500);
+        fade("--background-color",endColor,startColor,500);
+    }
+</script>
+
