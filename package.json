@@ -1,0 +1,12 @@
+{
+  "name": "fouad-azar-resume",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Professional resume website",
+  "scripts": {
+    "start": "serve"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
