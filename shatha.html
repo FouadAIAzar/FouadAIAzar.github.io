@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shatha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #1B4332 0%, #0B1F16 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .arabic {
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+
+        .content-wrapper {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 42rem;
+            padding: 2rem;
+        }
+
+        .custom-button {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .custom-button:hover {
+            background: rgba(128, 0, 32, 0.2);
+            border-color: rgba(128, 0, 32, 0.3);
+        }
+
+        .paragraph-container {
+            opacity: 0;
+            display: none;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 36rem;
+            padding: 0 1rem;
+            color: #F5F5F4;
+        }
+
+        .text-cream {
+            color: #F5F5F4;
+        }
+
+        .next-button-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -4rem;
+            opacity: 0;
+        }
+
+        #startButton {
+            transition: opacity 0.8s ease-out, transform 0.5s ease-out;
+        }
+
+        #startButton:hover {
+            transform: scale(1.05);
+        }
+
+        canvas {
+            position: fixed !important;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <button 
+            id="startButton"
+            class="custom-button arabic text-cream font-semibold py-8 px-16 rounded-lg text-3xl mx-auto block"
+        >
+            إنسان في صورة ملاك
+        </button>
+
+        <div id="contentContainer">
+            <div class="paragraphs">
+                <div class="paragraph-container" id="videoContainer">
+                    <div class="youtube-wrapper mb-8">
+                        <iframe 
+                            id="youtubeVideo"
+                            src="https://www.youtube.com/embed/pnwnalnLsfk?loop=1&playlist=pnwnalnLsfk" 
+                            class="mx-auto rounded-lg shadow-lg"
+                            width="560"
+                            height="315"
+                            allow="autoplay"
+                            frameborder="0"
+                        ></iframe>
+                    </div>
+                    <p class="text-cream text-xl mb-6">
+                        Please take a moment to play this song...
+                    </p>
+                    <button 
+                        id="continueButton"
+                        class="custom-button text-cream font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105"
+                    >
+                        Continue
+                    </button>
+                </div>
+
+                <!-- HERE -->
+                <div class="paragraph-container">
+                    <p class="text-cream text-2xl leading-relaxed">
+                        In a world filled with chaos and noise, there exists a soul that carries within it the serenity of angels and the purity of heaven.
+                    </p>
+                </div>
+                <!-- HERE -->
+
+
+            <div class="next-button-container">
+                <button 
+                    id="nextButton" 
+                    class="custom-button text-cream font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 hover:scale-105"
+                >
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Add data-index to paragraphs
+            $('.paragraph-container').each(function(index) {
+                $(this).attr('data-index', index);
+            });
+
+            let currentIndex = -1;
+            const paragraphs = $('.paragraph-container');
+            const nextButton = $('.next-button-container');
+            const startButton = $('#startButton');
+
+            function showNextParagraph() {
+                currentIndex++;
+
+                if (currentIndex > 0) {
+                    nextButton.fadeOut(600, function() {
+                        $(paragraphs[currentIndex - 1]).fadeOut(800);
+                    });
+                }
+
+                if (currentIndex < paragraphs.length) {
+                    setTimeout(() => {
+                        $(paragraphs[currentIndex])
+                            .css({
+                                'display': 'block',
+                                'opacity': '0'
+                            })
+                            .animate({
+                                opacity: 1
+                            }, 1200, 'swing');
+
+                        if (currentIndex < paragraphs.length - 1 && currentIndex !== 0) {
+                            setTimeout(() => {
+                                nextButton
+                                    .css({
+                                        'display': 'block',
+                                        'opacity': '0'
+                                    })
+                                    .animate({
+                                        opacity: 1
+                                    }, 800, 'swing');
+                            }, 1500);
+                        }
+                    }, 1400);
+                }
+            }
+
+            startButton.click(function() {
+                $(this).animate({
+                    opacity: 0
+                }, 800, 'swing', function() {
+                    $(this).css('display', 'none');
+                    showNextParagraph();
+                });
+            });
+
+            $('#continueButton').click(function() {
+                $('#videoContainer').fadeOut(800, function() {
+                    const thankYou = $('<div>')
+                        .addClass('paragraph-container')
+                        .css({
+                            'display': 'block',
+                            'opacity': '0'
+                        })
+                        .html('<p class="text-cream text-2xl leading-relaxed">Thank you for listening...</p>')
+                        .insertAfter('#videoContainer');
+
+                    thankYou.animate({ opacity: 1 }, 800, function() {
+                        setTimeout(() => {
+                            thankYou.fadeOut(800, function() {
+                                currentIndex = 0;
+                                showNextParagraph();
+                            });
+                        }, 2000);
+                    });
+                });
+            });
+
+            $('#nextButton').click(showNextParagraph);
+        });
+    </script>
+
+    <script>
+        let stars = [];
+        const mouseInfluenceRadius = 100; // How far the mouse effect reaches
+        const pushStrength = 2; // How strongly stars are pushed
+
+        function setup() {
+            createCanvas(windowWidth, windowHeight);
+            // Create 100 stars
+            for (let i = 0; i < 100; i++) {
+                stars.push({
+                    x: random(width),
+                    y: random(height),
+                    size: random(1, 3),
+                    speedX: random(-0.2, 0.2),
+                    speedY: random(-0.2, 0.2),
+                    originalX: 0, // Store original position for returning behavior
+                    originalY: 0,
+                    brightness: random(100, 255),
+                    angle: random(TWO_PI)
+                });
+            }
+        }
+
+        function draw() {
+            clear();
+            stars.forEach(star => {
+                // Store original position on first frame
+                if (star.originalX === 0) {
+                    star.originalX = star.x;
+                    star.originalY = star.y;
+                }
+
+                // Calculate distance from mouse
+                let dx = star.x - mouseX;
+                let dy = star.y - mouseY;
+                let distance = sqrt(dx * dx + dy * dy);
+
+                // Apply mouse influence
+                if (distance < mouseInfluenceRadius) {
+                    let angle = atan2(dy, dx);
+                    let force = map(distance, 0, mouseInfluenceRadius, pushStrength, 0);
+                    star.x += cos(angle) * force;
+                    star.y += sin(angle) * force;
+                }
+
+                // Natural movement
+                star.x += star.speedX;
+                star.y += star.speedY;
+
+                // Return to original position slowly
+                star.x += (star.originalX - star.x) * 0.02;
+                star.y += (star.originalY - star.y) * 0.02;
+                
+                // Wrap around screen edges
+                if (star.x < 0) star.x = width;
+                if (star.x > width) star.x = 0;
+                if (star.y < 0) star.y = height;
+                if (star.y > height) star.y = 0;
+
+                // Make stars twinkle
+                star.brightness = map(sin(star.angle), -1, 1, 100, 255);
+                star.angle += 0.02;
+                
+                // Draw the star with a glow effect
+                noStroke();
+                
+                // Outer glow
+                fill(255, 255, 255, star.brightness * 0.15);
+                circle(star.x, star.y, star.size * 3);
+                
+                // Inner glow
+                fill(255, 255, 255, star.brightness * 0.35);
+                circle(star.x, star.y, star.size * 2);
+                
+                // Core
+                fill(255, 255, 255, star.brightness);
+                circle(star.x, star.y, star.size);
+            });
+        }
+
+        function windowResized() {
+            resizeCanvas(windowWidth, windowHeight);
+        }
+    </script>
+</body>
+</html> 
