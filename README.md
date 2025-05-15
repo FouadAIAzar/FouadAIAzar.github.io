@@ -1,20 +1,33 @@
-# Fouad A. I. Azar - Professional Resume
+# Fouad A. I. Azar - Portfolio
 
-Static resume website built with HTML, CSS, and JavaScript.
+Personal website built with HTML, CSS, and JavaScript. Hosted at fouadazar.com.
 
-## Development
+## Stack
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
+- Font Awesome 6
+- AOS Library
 
-To run locally:
+## Files
+```
+├── index.html          # Main page
+├── style.css          # Styles
+├── main.js            # Scripts
+├── images/            # Assets
+├── favicon_io/        # Icons
+├── CV.pdf            # Resume
+├── .htaccess         # Apache config
+└── CNAME             # Domain config
+```
 
-1. Install dependencies: `npm install`
-2. Start local server: `npm start`
+## Setup
+1. Clone repo
+2. Edit content
+3. Deploy
 
-## Deployment
-
-This site can be deployed to GitHub Pages:
-
-1. Create a new repository on GitHub
-2. Push this code to the repository
-3. Go to Settings > Pages
-4. Select the main branch as source
-5. Your site will be available at `https://[username].github.io/[repository-name]`
+## Contact
+- Email: fouad.azar@live.com
+- LinkedIn: [Fouad A. I. Azar](https://linkedin.com/in/fouad-a-i-azar)
+- GitHub: [FouadAIAzar](https://github.com/FouadAIAzar) 
