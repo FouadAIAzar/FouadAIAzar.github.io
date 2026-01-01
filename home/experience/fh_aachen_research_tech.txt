@@ -1,0 +1,7 @@
+Role: Research Technician
+Company: FH Aachen
+Duration: June 2019 - Aug 2019
+
+Description:
+- Calibrated and maintained ophthalmological devices.
+

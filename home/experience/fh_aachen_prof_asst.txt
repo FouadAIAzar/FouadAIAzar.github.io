@@ -1,0 +1,7 @@
+Role: Professor's Assistant
+Company: FH Aachen
+Duration: June 2015 - Dec 2020
+
+Description:
+- Prepared and lectured in various subjects, including Calculus I/II, Information Processing, German, and Biomolecular Physics.
+

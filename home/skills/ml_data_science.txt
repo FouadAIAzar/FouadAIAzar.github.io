@@ -1,0 +1,11 @@
+Frameworks & Libraries:
+- TensorFlow
+- PyTorch
+- Scikit-learn
+- Pandas
+
+Methods:
+- Deep Neural Networks
+- Multivariate Analysis
+- Self-Organizing Maps
+

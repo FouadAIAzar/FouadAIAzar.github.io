@@ -1,0 +1,7 @@
+Role: Research Assistant
+Company: FH Aachen
+Duration: June 2019 - Aug 2019
+
+Description:
+- Conducted finite element analysis to study and replicate stress behavior of kyphotic vertebrae.
+

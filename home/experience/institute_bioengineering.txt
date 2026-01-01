@@ -1,0 +1,8 @@
+Role: Project Coordinator
+Company: Institute of Bioengineering
+Duration: Jan 2019 - Dec 2020
+
+Description:
+- Led team in multi-modal spectroscopy ML applications for urinalysis.
+- Created detailed catalogue of urine constituents.
+

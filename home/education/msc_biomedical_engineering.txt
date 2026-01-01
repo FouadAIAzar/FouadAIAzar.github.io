@@ -1,0 +1,7 @@
+Degree: MSc Biomedical Engineering
+Institution: FH Aachen, Germany
+GPA: 3.6 (Note: 1.7)
+
+Focus:
+- Specialized in Medical Physics and Bioinformatics.
+

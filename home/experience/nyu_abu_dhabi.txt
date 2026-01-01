@@ -1,0 +1,10 @@
+Role: Research Engineer
+Company: NYU Abu Dhabi
+Duration: Feb 2025 - Present
+Location: Abu Dhabi
+
+Description:
+- Research Engineer at the Public Health Research Center (PHRC).
+- Lead Developer of the OmniLIMS.
+- Focusing on multi-omics data analysis and pipeline development.
+

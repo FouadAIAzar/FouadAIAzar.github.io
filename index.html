@@ -118,11 +118,9 @@
   <!-- Navigation -->
   <nav id="mainNav" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 backdrop-blur-md bg-dark/80 border-b border-white/5">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="text-xl font-bold text-white tracking-tight font-mono group relative cursor-text" id="terminal-wrapper">
-        <span class="text-green-400">fouad@index</span>:<span class="text-blue-400" id="terminal-path">~</span>$ <span id="user-input" class="text-slate-300"></span><span class="text-slate-300 animate-pulse">_</span>
-        <input type="text" id="terminal-input" class="absolute top-0 left-0 w-full h-full opacity-0 cursor-text" autocomplete="off" aria-label="Terminal Input">
-      </div>
-      <div id="terminal-output" class="absolute top-12 left-6 bg-dark/95 p-2 rounded text-sm font-mono text-slate-300 hidden border border-slate-700 shadow-xl z-50"></div>
+      <button id="terminal-trigger" class="text-xl font-bold text-white tracking-tight font-mono group relative hover:opacity-80 transition-opacity">
+        <span class="text-green-400">fouad@index</span>:<span class="text-blue-400" id="terminal-path">~</span>$ <span class="text-slate-300 animate-pulse">_</span>
+      </button>
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-8">
@@ -153,6 +151,36 @@
     </div>
   </nav>
 
+  <!-- CLI Modal (Moved outside nav to avoid stacking context issues) -->
+  <div id="cli-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden flex items-center justify-center">
+    <div class="bg-dark border border-slate-700 w-full max-w-3xl h-[60vh] rounded-lg shadow-2xl flex flex-col font-mono relative mx-4">
+      <!-- CLI Header -->
+      <div class="flex items-center justify-between px-4 py-2 bg-slate-800 rounded-t-lg border-b border-slate-700">
+        <span class="text-xs font-mono">
+          <span class="text-green-400">fouad@index</span>:<span class="text-blue-400">~</span>$
+        </span>
+        <button id="close-cli" class="text-slate-400 hover:text-red-400 transition-colors">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      
+      <!-- CLI Content -->
+      <div id="cli-content" class="flex-1 p-4 overflow-y-auto text-sm text-slate-300 space-y-2">
+        <div class="mb-4 text-slate-500">
+          Welcome to Fouad's Terminal.<br>
+          Type 'help' for a list of commands.
+        </div>
+        <div id="cli-history"></div>
+        <div class="flex items-center group">
+          <span class="mr-2 font-mono">
+            <span class="text-green-400">fouad@index</span>:<span class="text-blue-400" id="cli-path">~</span>$
+          </span>
+          <input type="text" id="cli-input" class="bg-transparent border-none outline-none text-slate-300 w-full font-mono" autocomplete="off" autofocus>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Hero Section -->
   <section id="about" class="min-h-screen flex items-center pt-20 relative overflow-hidden">
     <div class="container mx-auto px-6">
@@ -164,7 +192,7 @@
             Fouad Azar.
           </h1>
           <h2 class="text-3xl lg:text-4xl text-slate-400 font-bold mb-6">
-            I decode life with <span class="text-primary">data</span>.
+            I do this because I'm <span class="text-primary">bored</span>.
           </h2>
           <p class="text-lg text-slate-400 mb-8 max-w-lg leading-relaxed">
             Biomedical Engineer & Bioinformatician specializing in multi-omics databases, machine learning, and spectroscopy. Based in Abu Dhabi.

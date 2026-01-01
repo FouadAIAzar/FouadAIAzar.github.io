@@ -1,0 +1,8 @@
+Role: Bioinformatician
+Company: Prepaire
+Duration: Nov 2022 - Jan 2025
+
+Description:
+- Curated multi-omic databases by systematically annotating and validating personalized biological datasets.
+- Handled genomic, transcriptomic, proteomic, and metabolomic information integration.
+

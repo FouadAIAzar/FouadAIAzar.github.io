@@ -1,0 +1,14 @@
+Languages & Core:
+- PHP
+- Python
+- Bash
+- C/C++
+- MATLAB
+- R
+
+Databases & Architecture:
+- PostgreSQL
+- MySQL
+- LAMP/LAPP
+- MVC
+

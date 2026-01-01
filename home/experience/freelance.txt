@@ -1,0 +1,8 @@
+Role: Biomedical Engineer
+Company: Freelance
+Duration: Apr 2020 - Oct 2022
+
+Description:
+- Executed projects in FMRI & EEG convolution and biomechanical simulations.
+- Conducted pitch analysis in speech processing.
+

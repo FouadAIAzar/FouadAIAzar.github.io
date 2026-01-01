@@ -1,0 +1,9 @@
+Optical Spectroscopy:
+- Fluorescence
+- Absorption
+- EEM
+
+Bioinformatics:
+- Multi-omics Databases
+- NGS Technology
+
