@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fouad A. I. Azar | Biomedical Engineer & Bioinformatician</title>
+  <title>Fouad Azar</title>
   <meta name="description" content="Portfolio of Fouad A. I. Azar - Specializing in Bioinformatics, Machine Learning, and Biomedical Engineering.">
   
   <!-- Open Graph / Facebook -->
@@ -80,24 +80,49 @@
       0% { transform: translate(0, 0) scale(1); }
       100% { transform: translate(20px, 40px) scale(1.1); }
     }
+
+    /* Fluorescence Animation */
+    @keyframes fluorescence {
+      0% {
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+      }
+      25% {
+        /* Excitation: UV Purple */
+        box-shadow: 0 0 20px 5px rgba(139, 92, 246, 0.8);
+      }
+      50% {
+        /* Emission: Fluorescent Blue/Cyan */
+        box-shadow: 0 0 25px 8px rgba(34, 211, 238, 0.8);
+        filter: brightness(1.2);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+        filter: brightness(1);
+      }
+    }
+
+    .animate-fluorescence {
+      animation: fluorescence 0.8s ease-out;
+    }
   </style>
 </head>
-
-<body class="bg-dark text-slate-300 antialiased font-sans selection:bg-primary selection:text-white overflow-x-hidden">
+<body class="bg-dark text-slate-300 antialiased font-sans selection:bg-primary selection:text-white overflow-x-hidden w-full">
 
   <!-- DNA Background -->
-  <div id="dna-canvas" class="fixed inset-0 pointer-events-none opacity-40"></div>
+  <div id="dna-canvas" class="fixed inset-0 pointer-events-none opacity-40 w-full h-full"></div>
 
   <!-- Background Blobs (Optional - keeping for layered depth or remove if too busy) -->
-  <div class="blob bg-purple-600 w-96 h-96 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2"></div>
-  <div class="blob bg-blue-600 w-96 h-96 rounded-full bottom-0 right-0 translate-x-1/2 translate-y-1/2 animation-delay-2000"></div>
+  <div class="blob bg-purple-600 w-96 h-96 rounded-full top-0 left-0 -translate-x-1/2 -translate-y-1/2 overflow-hidden"></div>
+  <div class="blob bg-blue-600 w-96 h-96 rounded-full bottom-0 right-0 translate-x-1/2 translate-y-1/2 animation-delay-2000 overflow-hidden"></div>
 
   <!-- Navigation -->
   <nav id="mainNav" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 backdrop-blur-md bg-dark/80 border-b border-white/5">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <a href="#" class="text-2xl font-bold text-white tracking-tighter">
-        <span class="text-primary">&lt;</span>Fouad<span class="text-primary">/&gt;</span>
-      </a>
+      <div class="text-xl font-bold text-white tracking-tight font-mono group relative cursor-text" id="terminal-wrapper">
+        <span class="text-green-400">fouad@index</span>:<span class="text-blue-400" id="terminal-path">~</span>$ <span id="user-input" class="text-slate-300"></span><span class="text-slate-300 animate-pulse">_</span>
+        <input type="text" id="terminal-input" class="absolute top-0 left-0 w-full h-full opacity-0 cursor-text" autocomplete="off" aria-label="Terminal Input">
+      </div>
+      <div id="terminal-output" class="absolute top-12 left-6 bg-dark/95 p-2 rounded text-sm font-mono text-slate-300 hidden border border-slate-700 shadow-xl z-50"></div>
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-8">
@@ -136,7 +161,7 @@
         <div class="lg:w-1/2" data-aos="fade-right">
           <p class="text-primary font-mono mb-4">Hello, my name is</p>
           <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Fouad A. I. Azar.
+            Fouad Azar.
           </h1>
           <h2 class="text-3xl lg:text-4xl text-slate-400 font-bold mb-6">
             I decode life with <span class="text-primary">data</span>.
@@ -273,63 +298,11 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-24">
+  <!-- Education Section -->
+  <section id="education" class="py-24">
     <div class="container mx-auto px-6">
       <div class="flex items-center mb-16" data-aos="fade-up">
         <span class="text-primary font-mono text-xl mr-4">02.</span>
-        <h2 class="text-3xl font-bold text-white">Technical Arsenal</h2>
-        <div class="h-px bg-slate-700 flex-grow ml-6"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Category 1 -->
-        <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700/50" data-aos="fade-up">
-            <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-code"></i></div>
-            <h3 class="text-xl font-bold text-white mb-4">Languages & Core</h3>
-            <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Python</span>
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">R</span>
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">C/C++</span>
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">MATLAB</span>
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">SQL</span>
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Bash</span>
-            </div>
-        </div>
-
-        <!-- Category 2 -->
-        <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700/50" data-aos="fade-up" data-aos-delay="100">
-            <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-brain"></i></div>
-            <h3 class="text-xl font-bold text-white mb-4">ML & Data</h3>
-            <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">TensorFlow</span>
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">PyTorch</span>
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Pandas</span>
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Scikit-learn</span>
-                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Bioconductor</span>
-            </div>
-        </div>
-
-        <!-- Category 3 -->
-        <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700/50" data-aos="fade-up" data-aos-delay="200">
-            <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-microscope"></i></div>
-            <h3 class="text-xl font-bold text-white mb-4">Specializations</h3>
-            <ul class="text-sm text-slate-400 space-y-2">
-                <li><i class="fa-solid fa-check text-primary mr-2"></i>Multi-omics Databases</li>
-                <li><i class="fa-solid fa-check text-primary mr-2"></i>Deep Neural Networks</li>
-                <li><i class="fa-solid fa-check text-primary mr-2"></i>Spectroscopy (NMR/Optical)</li>
-                <li><i class="fa-solid fa-check text-primary mr-2"></i>NGS Technology</li>
-            </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="py-24 bg-dark/50">
-    <div class="container mx-auto px-6">
-      <div class="flex items-center mb-16" data-aos="fade-up">
-        <span class="text-primary font-mono text-xl mr-4">03.</span>
         <h2 class="text-3xl font-bold text-white">Education</h2>
         <div class="h-px bg-slate-700 flex-grow ml-6"></div>
       </div>
@@ -353,6 +326,81 @@
             <p class="text-xl text-slate-300 mb-2">FH Aachen, Germany</p>
             <p class="font-mono text-primary mb-4">GPA: 3.2 (Note: 2.3)</p>
             <p class="text-slate-400 text-sm">Focus on Medical Instrumentation and Signal Processing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 bg-dark/50">
+    <div class="container mx-auto px-6">
+      <div class="flex items-center mb-16" data-aos="fade-up">
+        <span class="text-primary font-mono text-xl mr-4">03.</span>
+        <h2 class="text-3xl font-bold text-white">Technical Arsenal</h2>
+        <div class="h-px bg-slate-700 flex-grow ml-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Category 1: Languages & Core -->
+        <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700/50" data-aos="fade-up">
+            <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-code"></i></div>
+            <h3 class="text-xl font-bold text-white mb-4">Core Stack</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">PHP</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Python</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Bash</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">C/C++</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">MATLAB</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">R</span>
+            </div>
+            <h4 class="text-sm font-bold text-slate-400 mb-2 uppercase tracking-wider">Databases & Arch</h4>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">PostgreSQL</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">MySQL</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">LAMP/LAPP</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">MVC</span>
+            </div>
+        </div>
+
+        <!-- Category 2: ML & Data -->
+        <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700/50" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-brain"></i></div>
+            <h3 class="text-xl font-bold text-white mb-4">ML & Data Science</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">TensorFlow</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">PyTorch</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Scikit-learn</span>
+                <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Pandas</span>
+            </div>
+            <h4 class="text-sm font-bold text-slate-400 mb-2 uppercase tracking-wider">Methods</h4>
+             <ul class="text-sm text-slate-400 space-y-1">
+                <li><i class="fa-solid fa-chevron-right text-primary text-xs mr-2"></i>Deep Neural Networks</li>
+                <li><i class="fa-solid fa-chevron-right text-primary text-xs mr-2"></i>Multivariate Analysis</li>
+                <li><i class="fa-solid fa-chevron-right text-primary text-xs mr-2"></i>Self-Organizing Maps</li>
+            </ul>
+        </div>
+
+        <!-- Category 3: Specializations -->
+        <div class="bg-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 border border-slate-700/50" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-primary text-3xl mb-4"><i class="fa-solid fa-microscope"></i></div>
+            <h3 class="text-xl font-bold text-white mb-4">Domain Expertise</h3>
+            <div class="space-y-4">
+                <div>
+                    <h4 class="text-sm font-bold text-slate-400 mb-2 uppercase tracking-wider">Optical Spectroscopy</h4>
+                    <div class="flex flex-wrap gap-2">
+                         <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Fluorescence</span>
+                         <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">Absorption</span>
+                         <span class="px-3 py-1 bg-slate-700/50 rounded-full text-xs font-mono text-primary-hover">EEM</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-slate-400 mb-2 uppercase tracking-wider">Bioinformatics</h4>
+                    <ul class="text-sm text-slate-400 space-y-1">
+                        <li><i class="fa-solid fa-check text-primary mr-2"></i>Multi-omics Databases</li>
+                        <li><i class="fa-solid fa-check text-primary mr-2"></i>NGS Technology</li>
+                    </ul>
+                </div>
+            </div>
         </div>
       </div>
     </div>
@@ -387,3 +435,4 @@
   <script src="dna-animation.js"></script>
 </body>
 </html>
+
