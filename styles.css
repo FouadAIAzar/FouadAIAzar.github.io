@@ -293,3 +293,72 @@ table.jobs ul {
   font-family: "Arial", sans-serif;
   font-weight: normal;
 }
+
+/* ── Mobile ───────────────────────────────────────────────── */
+@media (max-width: 600px) {
+
+  body {
+    padding: 12px !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Stack photo above bio text */
+  table.layout,
+  table.layout tbody,
+  table.layout tr,
+  table.layout td {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  table.layout td:first-child {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  /* Experience: stack date above role */
+  table.jobs td.when {
+    display: block;
+    width: 100%;
+    white-space: normal;
+    padding-bottom: 2px;
+    font-size: 11px;
+  }
+
+  table.jobs td.role {
+    display: block;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  table.jobs tr {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* Education table: scrollable rather than wrapping */
+  table.data {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+
+  /* Popup: don't overflow the screen */
+  #popup-ad {
+    width: calc(100vw - 24px) !important;
+    max-width: 340px;
+  }
+
+  /* Marquee text smaller */
+  .marquee-bar {
+    font-size: 10px;
+  }
+
+  /* Heading sizes a touch smaller */
+  h1 { font-size: 20px; }
+  h2 { font-size: 15px; }
+  h3 { font-size: 13px; }
+}
