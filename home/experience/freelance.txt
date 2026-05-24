@@ -6,3 +6,4 @@ Description:
 - Executed projects in FMRI & EEG convolution and biomechanical simulations.
 - Conducted pitch analysis in speech processing.
 
+
