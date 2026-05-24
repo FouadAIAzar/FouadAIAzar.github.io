@@ -9,171 +9,8 @@
   <meta name="keywords" content="fouad, azar, bioinformatics, biomedical, engineering, homepage">
   <meta name="author" content="Fouad A. I. Azar">
   <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
-
-  <style>
-    body {
-      background-color: #cfcfc4;
-      color: #000000;
-      font-family: "Times New Roman", Times, serif;
-      font-size: 16px;
-      margin: 0;
-      padding: 24px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      border-left: 2px ridge #808080;
-      border-right: 2px ridge #808080;
-    }
-
-    a:link    { color: #0000ee; }
-    a:visited { color: #551a8b; }
-    a:active  { color: #ff0000; }
-    a:hover   { background-color: #ffff00; }
-
-    h1, h2, h3 {
-      font-family: "Times New Roman", Times, serif;
-      color: #000080;
-      margin-bottom: 4px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 36px;
-      text-decoration: underline;
-    }
-
-    h2 {
-      font-size: 22px;
-      border-bottom: 1px dashed #000080;
-    }
-
-    h3 {
-      font-size: 18px;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px dashed #000000;
-      margin: 16px 0;
-    }
-
-    .ascii {
-      font-family: "Courier New", Courier, monospace;
-      white-space: pre;
-      font-size: 12px;
-      color: #006400;
-      text-align: center;
-      line-height: 1.1;
-    }
-
-    .marquee-bar {
-      background-color: #000080;
-      color: #ffff00;
-      font-family: "Courier New", Courier, monospace;
-      padding: 4px;
-      border: 2px outset #c0c0c0;
-    }
-
-    .toc {
-      background-color: #ffffe0;
-      border: 2px ridge #808080;
-      padding: 8px 16px;
-      margin: 16px 0;
-    }
-
-    .toc ul {
-      margin: 4px 0;
-      padding-left: 24px;
-    }
-
-    table.layout {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 12px 0;
-    }
-
-    table.layout td {
-      vertical-align: top;
-      padding: 8px;
-    }
-
-    table.data {
-      border: 2px ridge #808080;
-      border-collapse: collapse;
-      width: 100%;
-      margin: 8px 0;
-      background-color: #f5f5dc;
-    }
-
-    table.data th, table.data td {
-      border: 1px solid #808080;
-      padding: 6px;
-      text-align: left;
-    }
-
-    table.data th {
-      background-color: #000080;
-      color: #ffffff;
-    }
-
-    blockquote {
-      background-color: #ffffe0;
-      border-left: 4px solid #808080;
-      padding: 8px 12px;
-      margin: 12px 0;
-      font-style: italic;
-    }
-
-    .signature {
-      font-family: "Courier New", Courier, monospace;
-      font-size: 13px;
-      color: #444444;
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 12px;
-      color: #444444;
-      margin-top: 24px;
-      border-top: 2px ridge #808080;
-      padding-top: 12px;
-    }
-
-    .badge {
-      display: inline-block;
-      border: 1px solid #000;
-      background: #c0c0c0;
-      padding: 2px 6px;
-      font-family: "Courier New", Courier, monospace;
-      font-size: 10px;
-      margin: 2px;
-      text-transform: uppercase;
-    }
-
-    .construction {
-      text-align: center;
-      font-family: "Courier New", Courier, monospace;
-      color: #b8860b;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    img.portrait {
-      border: 4px ridge #808080;
-      max-width: 180px;
-      filter: grayscale(20%);
-    }
-
-    .counter {
-      display: inline-block;
-      background: #000;
-      color: #00ff00;
-      font-family: "Courier New", Courier, monospace;
-      padding: 2px 8px;
-      border: 2px inset #808080;
-      letter-spacing: 4px;
-    }
-  </style>
+  <link rel="stylesheet" href="https://unpkg.com/xp.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -183,15 +20,6 @@
       *** Welcome to Fouad's homepage! *** Currently open to new opportunities in Bioinformatics &amp; Data Science *** Email me at fouad.azar@live.com *** Best viewed at 800x600 ***
     </marquee>
   </div>
-
-  <pre class="ascii">
-   ____                       _   _    ____   _    ____
-  |  _ \  ___   _   _   __ _ | | | |  / __ \ / |  / __ \
-  | |_) |/ _ \ | | | | / _` || | | | | /__\ |' | | /__\ |
-  |  __/| (_) || |_| || (_| || |_| | | \__/ | | | \__/ |
-  |_|    \___/  \__,_| \__,_| \___/   \____/ |_|  \____/
-                  F O U A D  A. I.  A Z A R
-  </pre>
 
   <h1>Fouad A. I. Azar</h1>
   <p style="text-align:center;">
@@ -204,8 +32,8 @@
   <table class="layout">
     <tr>
       <td style="width: 200px; text-align:center;">
-        <img src="./images/me.jpg" alt="A photograph of Fouad" class="portrait"><br>
-        <small><i>(yours truly)</i></small>
+        <canvas id="pixel-portrait" class="portrait" width="180" height="180" aria-label="A pixelated photograph of Fouad"></canvas>
+        <small><i>(yours_truly.jpg)</i></small>
       </td>
       <td>
         <h2>Hello, world.</h2>
@@ -246,52 +74,76 @@
   <!-- Experience -->
   <h2 id="experience">1. Where I've Worked</h2>
 
-  <h3>Research Engineer &mdash; NYU Abu Dhabi</h3>
-  <p><i>Feb 2025 &ndash; Present</i></p>
-  <ul>
-    <li>Research Engineer at the Public Health Research Center (PHRC).</li>
-    <li>Lead Developer of <b>OmniLIMS</b>.</li>
-    <li>Focusing on multi-omics data analysis and pipeline development.</li>
-  </ul>
-
-  <h3>Bioinformatician &mdash; Prepaire</h3>
-  <p><i>Nov 2022 &ndash; Jan 2025</i></p>
-  <ul>
-    <li>Curated multi-omic databases by systematically annotating and validating personalized biological datasets.</li>
-    <li>Handled genomic, transcriptomic, proteomic, and metabolomic information integration.</li>
-  </ul>
-
-  <h3>Biomedical Engineer &mdash; Freelance</h3>
-  <p><i>Apr 2020 &ndash; Oct 2022</i></p>
-  <ul>
-    <li>Executed projects in FMRI &amp; EEG convolution and biomechanical simulations.</li>
-    <li>Conducted pitch analysis in speech processing.</li>
-  </ul>
-
-  <h3>Project Coordinator &mdash; Institute of Bioengineering</h3>
-  <p><i>Jan 2019 &ndash; Dec 2020</i></p>
-  <ul>
-    <li>Led a team in multi-modal spectroscopy ML applications for urinalysis.</li>
-    <li>Created a detailed catalogue of urine constituents.</li>
-  </ul>
-
-  <h3>Research Technician &mdash; FH Aachen</h3>
-  <p><i>June 2019 &ndash; Aug 2019</i></p>
-  <ul>
-    <li>Calibrated and maintained ophthalmological devices.</li>
-  </ul>
-
-  <h3>Research Assistant &mdash; FH Aachen</h3>
-  <p><i>June 2019 &ndash; Aug 2019</i></p>
-  <ul>
-    <li>Conducted finite element analysis to study and replicate stress behavior of kyphotic vertebrae.</li>
-  </ul>
-
-  <h3>Professor's Assistant &mdash; FH Aachen</h3>
-  <p><i>June 2015 &ndash; Dec 2020</i></p>
-  <ul>
-    <li>Prepared and lectured in various subjects, including Calculus I/II, Information Processing, German, and Biomolecular Physics.</li>
-  </ul>
+  <table class="jobs">
+    <tr>
+      <td class="when">Feb 2025 &ndash; Present</td>
+      <td class="role">
+        <b>Research Engineer</b>, NYU Abu Dhabi
+        <ul>
+          <li>Research Engineer at the Public Health Research Center (PHRC).</li>
+          <li>Lead Developer of <b>OmniLIMS</b>.</li>
+          <li>Focusing on multi-omics data analysis and pipeline development.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="when">Nov 2022 &ndash; Jan 2025</td>
+      <td class="role">
+        <b>Bioinformatician</b>, Prepaire
+        <ul>
+          <li>Curated multi-omic databases by systematically annotating and validating personalized biological datasets.</li>
+          <li>Handled genomic, transcriptomic, proteomic, and metabolomic information integration.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="when">Apr 2020 &ndash; Oct 2022</td>
+      <td class="role">
+        <b>Biomedical Engineer</b>, Freelance
+        <ul>
+          <li>Executed projects in FMRI &amp; EEG convolution and biomechanical simulations.</li>
+          <li>Conducted pitch analysis in speech processing.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="when">Jan 2019 &ndash; Dec 2020</td>
+      <td class="role">
+        <b>Project Coordinator</b>, Institute of Bioengineering
+        <ul>
+          <li>Led a team in multi-modal spectroscopy ML applications for urinalysis.</li>
+          <li>Created a detailed catalogue of urine constituents.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="when">June 2019 &ndash; Aug 2019</td>
+      <td class="role">
+        <b>Research Technician</b>, FH Aachen
+        <ul>
+          <li>Calibrated and maintained ophthalmological devices.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="when">June 2019 &ndash; Aug 2019</td>
+      <td class="role">
+        <b>Research Assistant</b>, FH Aachen
+        <ul>
+          <li>Conducted finite element analysis to study and replicate stress behavior of kyphotic vertebrae.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td class="when">June 2015 &ndash; Dec 2020</td>
+      <td class="role">
+        <b>Professor's Assistant</b>, FH Aachen
+        <ul>
+          <li>Prepared and lectured in various subjects, including Calculus I/II, Information Processing, German, and Biomolecular Physics.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
 
   <hr>
 
@@ -369,10 +221,6 @@
 
   <!-- Contact -->
   <h2 id="contact">4. Get In Touch</h2>
-  <blockquote>
-    I'm currently open to new opportunities in Bioinformatics and Data Science.
-    Whether you have a question or just want to say hi, my inbox is always open.
-  </blockquote>
 
   <p>
     <b>Email:</b> <a href="mailto:fouad.azar@live.com">fouad.azar@live.com</a><br>
@@ -387,30 +235,158 @@
     "I do this because I'm bored."<br>
   </p>
 
-  <hr>
+  <script>
+    (function () {
+      var canvas = document.getElementById('pixel-portrait');
+      if (!canvas || !canvas.getContext) return;
+      var ctx = canvas.getContext('2d');
+      var OUT = 180;
+      var PIX = 256;
 
-  <p class="construction">
-    [ -=- This page is perpetually under construction -=- ]
-  </p>
+      ctx.fillStyle = '#c0c0c0';
+      ctx.fillRect(0, 0, OUT, OUT);
 
-  <p style="text-align:center;">
-    <span class="badge">HTML 4.01</span>
-    <span class="badge">Lynx Friendly</span>
-    <span class="badge">No Cookies</span>
-    <span class="badge">Hand Coded</span>
-    <span class="badge">Best Viewed in Netscape</span>
-  </p>
+      var img = new Image();
+      img.onload = function () {
+        var s = Math.min(img.naturalWidth, img.naturalHeight);
+        var sx = (img.naturalWidth  - s) / 2;
+        var sy = (img.naturalHeight - s) / 2;
 
-  <div class="footer">
-    <p>
-      You are visitor <span class="counter">000042</span> since 1997.<br>
-      Last updated: <i>this morning, with coffee</i>.
-    </p>
-    <p>
-      &copy; Fouad A. I. Azar &middot; Designed &amp; built by hand &middot;
-      <a href="#top">[ back to top ]</a>
-    </p>
+        var tmp = document.createElement('canvas');
+        tmp.width = PIX;
+        tmp.height = PIX;
+        var tctx = tmp.getContext('2d');
+        tctx.imageSmoothingEnabled = true;
+        tctx.drawImage(img, sx, sy, s, s, 0, 0, PIX, PIX);
+
+        ctx.imageSmoothingEnabled = false;
+        ctx.mozImageSmoothingEnabled = false;
+        ctx.webkitImageSmoothingEnabled = false;
+        ctx.msImageSmoothingEnabled = false;
+
+        // Old-school interlaced GIF / progressive PNG reveal:
+        // Adam7-ish 4-pass scan. First pass paints every 8th row as a fat
+        // 8-tall band, so you immediately see chunky horizontal stripes;
+        // each subsequent pass slots in between, halving the stripe height.
+        function drawBand(oy, h) {
+          if (oy >= OUT) return;
+          var srcY = Math.floor(oy * PIX / OUT);
+          var hh = Math.min(h, OUT - oy);
+          ctx.drawImage(tmp, 0, srcY, PIX, 1, 0, oy, OUT, hh);
+        }
+
+        // Each pass has a delay range (min/max ms per row). Every tick we
+        // roll a fresh random delay so the painting jitters like a real
+        // dial-up connection. Occasionally we add a "packet stall" spike
+        // where the load just sits there for a beat. Result: different
+        // load animation every page view, but never too snappy.
+        var passes = [
+          { step: 8, offset: 0, height: 8, min: 60,  max: 180 },
+          { step: 8, offset: 4, height: 4, min: 45,  max: 140 },
+          { step: 4, offset: 2, height: 2, min: 30,  max: 110 },
+          { step: 2, offset: 1, height: 1, min: 20,  max: 80  }
+        ];
+
+        function jitter(min, max) {
+          var d = min + Math.random() * (max - min);
+          // ~12% chance of a noticeable slowdown (2x - 5x)
+          if (Math.random() < 0.12) d *= 2 + Math.random() * 3;
+          // ~5% chance of a packet hiccup (400 - 1200ms freeze)
+          if (Math.random() < 0.05) d += 400 + Math.random() * 800;
+          // ~1.5% chance of a full modem stall (1.5 - 3.5s)
+          if (Math.random() < 0.015) d += 1500 + Math.random() * 2000;
+          return d;
+        }
+
+        function runPass(p) {
+          if (p >= passes.length) return;
+          var pass = passes[p];
+          var oy = pass.offset;
+          (function step() {
+            if (oy >= OUT) { runPass(p + 1); return; }
+            drawBand(oy, pass.height);
+            oy += pass.step;
+            setTimeout(step, jitter(pass.min, pass.max));
+          })();
+        }
+        runPass(0);
+      };
+      img.onerror = function () {
+        ctx.fillStyle = '#000';
+        ctx.font = '12px "Courier New", monospace';
+        ctx.fillText('[image missing]', 30, 90);
+      };
+      img.src = './images/me.jpg';
+    })();
+  </script>
+
+  <!-- Fake pop-up ad -->
+  <div id="popup-ad" class="window" style="display:none; position:fixed; z-index:9999; width:340px;">
+    <div class="title-bar">
+      <div class="title-bar-text">!!! IMPORTANT MESSAGE !!!</div>
+      <div class="title-bar-controls">
+        <button aria-label="Close" id="popup-close-btn"></button>
+      </div>
+    </div>
+    <div class="window-body ad-body">
+      <div class="ad-flash">
+        <div class="ad-stars">&#9733;&#9733;&#9733; CONGRATULATIONS &#9733;&#9733;&#9733;</div>
+        <div class="ad-main-text">YOU HAVE BEEN<br>SELECTED!!!</div>
+        <div class="ad-sub">Fouad Azar is NOW HIRING<br>your attention!!</div>
+        <div class="ad-blink">&#9658; ACT NOW &#9664;</div>
+        <div class="ad-links">
+          <a class="ad-btn" href="https://linkedin.com/in/fouad-a-i-azar" target="_blank">&#128100; LINKEDIN PROFILE</a>
+          <a class="ad-btn" href="https://github.com/FouadAIAzar" target="_blank">&#128187; GITHUB PAGE</a>
+        </div>
+        <div class="ad-fine">* This offer expires when you close this window *<br>* and then reappears *</div>
+      </div>
+    </div>
   </div>
+
+  <script>
+    (function () {
+      var ad = document.getElementById('popup-ad');
+      var titlebar = ad.querySelector('.title-bar');
+
+      function respawn() {
+        var maxX = Math.max(0, window.innerWidth  - 340);
+        var maxY = Math.max(0, window.innerHeight - 200);
+        ad.style.left = Math.floor(Math.random() * maxX) + 'px';
+        ad.style.top  = Math.floor(Math.random() * maxY) + 'px';
+        ad.style.display = 'block';
+      }
+
+      document.getElementById('popup-close-btn').onclick = function () {
+        ad.style.display = 'none';
+      };
+
+      // Drag by title bar
+      var dragX, dragY, dragging = false;
+
+      titlebar.addEventListener('mousedown', function (e) {
+        if (e.target.id === 'popup-close-btn') return;
+        dragging = true;
+        dragX = e.clientX - ad.offsetLeft;
+        dragY = e.clientY - ad.offsetTop;
+        titlebar.style.cursor = 'grabbing';
+        e.preventDefault();
+      });
+
+      document.addEventListener('mousemove', function (e) {
+        if (!dragging) return;
+        ad.style.left = (e.clientX - dragX) + 'px';
+        ad.style.top  = (e.clientY - dragY) + 'px';
+      });
+
+      document.addEventListener('mouseup', function () {
+        dragging = false;
+        titlebar.style.cursor = 'default';
+      });
+
+      var delay = 3000 + Math.random() * 7000;
+      setTimeout(respawn, delay);
+    })();
+  </script>
 
 </body>
 </html>

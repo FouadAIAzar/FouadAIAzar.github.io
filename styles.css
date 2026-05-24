@@ -1,0 +1,295 @@
+html {
+  background: #5a8dd6 url('./images/windowsxp.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #cfcfc4 !important;
+  color: #000000;
+  font-family: "Tahoma", "Arial", sans-serif !important;
+  font-size: 13px;
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 800px;
+  border-left: 2px ridge #808080;
+  border-right: 2px ridge #808080;
+  box-shadow: 0 0 0 1px #000, 4px 4px 0 0 rgba(0, 0, 0, 0.35);
+  min-height: 100vh;
+}
+
+a:link    { color: #0000ee; }
+a:visited { color: #551a8b; }
+a:active  { color: #ff0000; }
+a:hover   { background-color: #ffff00; }
+
+h1, h2, h3 {
+  font-family: "Tahoma", "Arial", sans-serif;
+  color: #000080;
+  margin-bottom: 4px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 16px;
+  border-bottom: 1px dashed #000080;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dashed #000000;
+  margin: 16px 0;
+}
+
+.ascii {
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre;
+  font-size: 12px;
+  color: #006400;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.marquee-bar {
+  background-color: #000080;
+  color: #ffff00;
+  font-family: "Tahoma", "Arial", sans-serif;
+  font-size: 11px;
+  padding: 4px;
+  border: 2px outset #c0c0c0;
+}
+
+.toc {
+  background-color: #ffffe0;
+  border: 2px ridge #808080;
+  padding: 8px 16px;
+  margin: 16px 0;
+}
+
+.toc ul {
+  margin: 4px 0;
+  padding-left: 24px;
+}
+
+table.layout {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+}
+
+table.layout td {
+  vertical-align: top;
+  padding: 8px;
+}
+
+table.data {
+  border: 2px ridge #808080;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+  background-color: #f5f5dc;
+}
+
+table.data th, table.data td {
+  border: 1px solid #808080;
+  padding: 6px;
+  text-align: left;
+}
+
+table.data th {
+  background-color: #000080;
+  color: #ffffff;
+}
+
+blockquote {
+  background-color: #ffffe0;
+  border-left: 4px solid #808080;
+  padding: 8px 12px;
+  margin: 12px 0;
+  font-style: italic;
+}
+
+.signature {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  color: #444444;
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #444444;
+  margin-top: 24px;
+  border-top: 2px ridge #808080;
+  padding-top: 12px;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid #000;
+  background: #c0c0c0;
+  padding: 2px 6px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 10px;
+  margin: 2px;
+  text-transform: uppercase;
+}
+
+.construction {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: #b8860b;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.portrait {
+  border: 4px ridge #808080;
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  background: #c0c0c0;
+}
+
+.counter {
+  display: inline-block;
+  background: #000;
+  color: #00ff00;
+  font-family: "Courier New", Courier, monospace;
+  padding: 2px 8px;
+  border: 2px inset #808080;
+  letter-spacing: 4px;
+}
+
+table.jobs {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 16px 0;
+}
+
+table.jobs td {
+  vertical-align: top;
+  padding: 8px 10px;
+  border-bottom: 1px dashed #808080;
+}
+
+table.jobs td.when {
+  width: 150px;
+  white-space: nowrap;
+  font-style: italic;
+  color: #404040;
+}
+
+table.jobs td.role b {
+  color: #000080;
+}
+
+table.jobs ul {
+  margin: 6px 0 0 0;
+  padding-left: 22px;
+}
+
+/* ── Fake pop-up ad ───────────────────────────────────────── */
+#popup-ad {
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+}
+
+@keyframes bg-strobe {
+  0%   { background-color: #ff4444; color: #ffff00; }
+  25%  { background-color: #ffdd00; color: #000080; }
+  50%  { background-color: #00aaff; color: #ffff00; }
+  75%  { background-color: #cc00cc; color: #ffff00; }
+  100% { background-color: #ff4444; color: #ffff00; }
+}
+
+@keyframes text-flash {
+  0%, 59%  { opacity: 1; }
+  60%, 100% { opacity: 0; }
+}
+
+.ad-body {
+  padding: 0 !important;
+}
+
+.ad-flash {
+  animation: bg-strobe 1.2s steps(1, end) infinite;
+  padding: 14px 12px;
+  text-align: center;
+  font-family: "Arial Black", "Arial", sans-serif;
+}
+
+.ad-stars {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.ad-main-text {
+  font-size: 22px;
+  font-weight: 900;
+  text-shadow: 1px 1px 0 #000;
+  line-height: 1.2;
+  margin: 6px 0;
+}
+
+.ad-sub {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.ad-blink {
+  font-size: 15px;
+  font-weight: 900;
+  animation: text-flash 0.8s steps(1, end) infinite;
+  margin: 8px 0;
+}
+
+.ad-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 10px 0 8px;
+}
+
+.ad-btn {
+  display: block;
+  padding: 7px 10px;
+  font-family: "Arial Black", "Arial", sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none !important;
+  background: #ffff00;
+  color: #000080 !important;
+  border: 3px outset #ffffff;
+  text-shadow: none;
+}
+
+.ad-btn:hover {
+  border-style: inset;
+  background: #ffffff;
+}
+
+.ad-fine {
+  font-size: 9px;
+  color: inherit;
+  opacity: 0.75;
+  margin-top: 6px;
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+}
