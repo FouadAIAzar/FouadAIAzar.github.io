@@ -4,456 +4,315 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fouad A. I. Azar -=- Home Page</title>
-  <meta name="description" content="The home page of Fouad A. I. Azar - Biomedical Engineer & Bioinformatician.">
-  <meta name="keywords" content="fouad, azar, bioinformatics, biomedical, engineering, homepage">
+  <title>Fouad A. I. Azar | Research Engineer</title>
+  <meta name="description" content="Fouad A. I. Azar, Research Engineer at the Public Health Research Center, NYU Abu Dhabi. Bioinformatics, multi-omics databases, machine learning and optical spectroscopy.">
+  <meta name="keywords" content="fouad, azar, bioinformatics, biomedical, engineering, multi-omics, PHRC, NYU Abu Dhabi">
   <meta name="author" content="Fouad A. I. Azar">
+  <meta name="theme-color" content="#57068c">
   <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://unpkg.com/xp.css">
+  <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <div class="marquee-bar">
-    <marquee scrollamount="4">
-      *** Welcome to Fouad's homepage! *** Currently seeking a PhD position in Bioinformatics, Multi-omics &amp; Machine Learning *** Email me at fouad.azar@live.com 
-    </marquee>
+  <!-- Slim brand bar -->
+  <header class="brand-bar">
+    <div class="wrap brand-inner">
+      <a class="brand" href="./">
+        <img src="images/phrc-logo.png" alt="" width="40" height="36">
+        <span class="brand-text">
+          <span class="brand-name">Public Health Research Center</span>
+          <span class="brand-sub">NYU Abu Dhabi</span>
+        </span>
+      </a>
+      <a class="brand-cv" href="CV.pdf">Download CV</a>
+    </div>
+  </header>
+
+  <!-- Identity block -->
+  <section class="identity">
+    <div class="wrap identity-inner">
+      <img class="portrait" src="images/me.jpg" alt="Portrait of Fouad A. I. Azar" width="148" height="148">
+      <div class="identity-text">
+        <h1>Fouad A. I. Azar</h1>
+        <p class="position">Research Engineer</p>
+        <p class="dept">Public Health Research Center &middot; NYU Abu Dhabi</p>
+        <p class="loc">Abu Dhabi, United Arab Emirates</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tab bar -->
+  <nav class="tabbar" aria-label="Profile sections">
+    <div class="wrap">
+      <ul role="tablist">
+        <li><a role="tab" href="#about" data-tab="about">About</a></li>
+        <li><a role="tab" href="#experience" data-tab="experience">Experience</a></li>
+        <li><a role="tab" href="#education" data-tab="education">Education</a></li>
+        <li><a role="tab" href="#skills" data-tab="skills">Skills</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="wrap layout">
+
+    <main id="main">
+
+      <!-- ABOUT -->
+      <section class="panel" id="about" role="tabpanel">
+        <h2>Bio</h2>
+        <p><span class="runin">Research:</span> I am a biomedical engineer and bioinformatician working on
+          multi-omics databases, machine learning and optical spectroscopy. At NYU Abu Dhabi's Public
+          Health Research Center I lead development of <b>Omi&chi;LIMS</b>, the laboratory information
+          management system behind the centre's sample and study data.</p>
+        <p><span class="runin">Approach:</span> My work sits between the lab and the data: building the
+          databases, pipelines and analysis tooling that take genomic, transcriptomic, proteomic and
+          metabolomic measurements from collection through to integrated, analysable datasets.</p>
+        <p><span class="runin">Background:</span> I trained in biomedical engineering at FH Aachen, Germany
+          (BEng, MSc), with a focus on medical physics, signal processing and bioinformatics. Before
+          joining PHRC I curated multi-omic databases as a bioinformatician at Prepaire, and coordinated
+          multi-modal spectroscopy and machine-learning work for urinalysis at the Institute of
+          Bioengineering.</p>
+
+        <h2>Organisation</h2>
+        <ul class="plain">
+          <li>Public Health Research Center, NYU Abu Dhabi</li>
+        </ul>
+
+        <h2>Position</h2>
+        <ul class="plain">
+          <li>Research Engineer</li>
+        </ul>
+
+        <h2>Fields of research</h2>
+        <ul class="fields">
+          <li>Bioinformatics</li>
+          <li>Multi-omics data integration</li>
+          <li>Laboratory information management</li>
+          <li>Machine learning</li>
+          <li>Optical spectroscopy</li>
+          <li>Biomedical signal processing</li>
+          <li>Next-generation sequencing</li>
+          <li>Public health research</li>
+        </ul>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="panel" id="experience" role="tabpanel">
+        <h2>Experience</h2>
+        <ol class="entries">
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">Research Engineer</span>
+              <span class="entry-date">Feb 2025 &ndash; Present</span>
+            </div>
+            <div class="entry-org">Public Health Research Center, NYU Abu Dhabi</div>
+            <ul>
+              <li>Lead developer of <b>Omi&chi;LIMS</b>.</li>
+              <li>Multi-omics data analysis and pipeline development.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">Bioinformatician</span>
+              <span class="entry-date">Nov 2022 &ndash; Jan 2025</span>
+            </div>
+            <div class="entry-org">Prepaire</div>
+            <ul>
+              <li>Curated multi-omic databases by systematically annotating and validating personalised biological datasets.</li>
+              <li>Integrated genomic, transcriptomic, proteomic and metabolomic information.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">Biomedical Engineer</span>
+              <span class="entry-date">Apr 2020 &ndash; Oct 2022</span>
+            </div>
+            <div class="entry-org">Freelance</div>
+            <ul>
+              <li>fMRI and EEG convolution projects and biomechanical simulations.</li>
+              <li>Pitch analysis in speech processing.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">Project Coordinator</span>
+              <span class="entry-date">Jan 2019 &ndash; Dec 2020</span>
+            </div>
+            <div class="entry-org">Institute of Bioengineering</div>
+            <ul>
+              <li>Led a team on multi-modal spectroscopy and machine-learning applications for urinalysis.</li>
+              <li>Created a detailed catalogue of urine constituents.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">Research Technician &amp; Research Assistant</span>
+              <span class="entry-date">Jun 2019 &ndash; Aug 2019</span>
+            </div>
+            <div class="entry-org">FH Aachen</div>
+            <ul>
+              <li>Calibrated and maintained ophthalmological devices.</li>
+              <li>Finite element analysis of stress behaviour in kyphotic vertebrae.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">Professor's Assistant</span>
+              <span class="entry-date">Jun 2015 &ndash; Dec 2020</span>
+            </div>
+            <div class="entry-org">FH Aachen</div>
+            <ul>
+              <li>Prepared and taught Calculus I/II, Information Processing, German and Biomolecular Physics.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="panel" id="education" role="tabpanel">
+        <h2>Education</h2>
+        <ol class="entries">
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">MSc Biomedical Engineering</span>
+              <span class="entry-date">GPA 3.6 (Note 1.7)</span>
+            </div>
+            <div class="entry-org">FH Aachen, Germany</div>
+            <ul>
+              <li>Specialised in medical physics and bioinformatics.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="entry-head">
+              <span class="entry-title">BEng Biomedical Engineering</span>
+              <span class="entry-date">GPA 3.2 (Note 2.3)</span>
+            </div>
+            <div class="entry-org">FH Aachen, Germany</div>
+            <ul>
+              <li>Focus on medical instrumentation and signal processing.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="panel" id="skills" role="tabpanel">
+        <h2>Languages</h2>
+        <ul class="fields">
+          <li>PHP</li><li>Python</li><li>R</li><li>SQL</li><li>Bash</li><li>C/C++</li><li>MATLAB</li>
+        </ul>
+        <h2>Databases &amp; architecture</h2>
+        <ul class="fields">
+          <li>PostgreSQL</li><li>MySQL</li><li>LAMP / LAPP</li><li>MVC</li>
+        </ul>
+        <h2>Machine learning</h2>
+        <ul class="fields">
+          <li>TensorFlow</li><li>PyTorch</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li>
+          <li>Deep neural networks</li><li>Multivariate analysis</li><li>Self-organising maps</li>
+        </ul>
+        <h2>Bioinformatics</h2>
+        <ul class="fields">
+          <li>Multi-omics</li><li>NGS</li><li>Pipelines</li><li>Genomics</li>
+          <li>Transcriptomics</li><li>Proteomics</li><li>Metabolomics</li>
+        </ul>
+        <h2>Optical spectroscopy</h2>
+        <ul class="fields">
+          <li>Fluorescence</li><li>Absorption</li><li>EEM</li><li>Multi-modal</li>
+        </ul>
+        <h2>Tools</h2>
+        <ul class="fields">
+          <li>Git</li><li>Linux</li><li>Docker</li><li>LaTeX</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="side-block" id="contact">
+        <h3>Contact</h3>
+        <dl>
+          <dt>Position</dt>
+          <dd>Research Engineer, Public Health Research Center</dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:fouad.azar@live.com">fouad.azar@live.com</a></dd>
+          <dt>Location</dt>
+          <dd>NYU Abu Dhabi, Saadiyat Island<br>Abu Dhabi, UAE</dd>
+        </dl>
+      </div>
+
+      <div class="side-block">
+        <h3>External links</h3>
+        <ul class="links">
+          <li><a href="https://github.com/FouadAIAzar" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/fouad-a-i-azar" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="CV.pdf">Curriculum vitae (PDF)</a></li>
+        </ul>
+      </div>
+
+      <div class="callout">
+        <p class="callout-title">Open to PhD positions</p>
+        <p>Currently seeking a PhD position in bioinformatics, multi-omics and machine learning.</p>
+        <a class="btn" href="mailto:fouad.azar@live.com">Get in touch</a>
+      </div>
+    </aside>
+
   </div>
 
-  <h1>Fouad A. I. Azar</h1>
-  <p style="text-align:center;">
-    <i>Biomedical Engineer &middot; Bioinformatician</i><br>
-    <span class="signature"> I do this because I'm bored. </span>
-  </p>
-
-  <hr>
-
-  <table class="layout">
-    <tr>
-      <td style="width: 200px; text-align:center;">
-        <canvas id="pixel-portrait" class="portrait" width="180" height="180" aria-label="A pixelated photograph of Fouad"></canvas>
-        <small><i>(yours_truly.jpg)</i></small>
-      </td>
-      <td>
-        <h2>Hello, world.</h2>
-        <p>
-          My name is Fouad. I am a Biomedical Engineer and
-          Bioinformatician based in Abu Dhabi, currently working at NYU
-          Abu Dhabi's Public Health Research Center. I specialize in
-          multi-omics databases, machine learning, and
-          optical spectroscopy.
-        </p>
-        <p>
-          <a href="CV.pdf">[ Download my CV/Resume ]</a> &nbsp;
-          <a href="mailto:fouad.azar@live.com">[ Email me ]</a>
-        </p>
-      </td>
-    </tr>
-  </table>
-
-  <hr>
-
-  <!-- Table of contents -->
-  <div class="toc">
-    <b>::: Contents :::</b>
-    <ul>
-      <li><a href="#experience">1. Where I've Worked</a></li>
-      <li><a href="#education">2. Education</a></li>
-      <li><a href="#skills">3. Skills</a></li>
-      <li><a href="#contact">4. Get In Touch</a></li>
-    </ul>
-  </div>
-
-  <hr>
-
-  <!-- Experience -->
-  <h2 id="experience">1. Where I've Worked</h2>
-
-  <div class="jobs-list">
-
-    <div class="job-box">
-      <div class="job-titlebar">
-        <span class="job-role">Research Engineer @ NYU Abu Dhabi</span>
-        <span class="job-dates">Feb 2025 &ndash; Present</span>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-name">Fouad A. I. Azar</p>
+        <p>Public Health Research Center, NYU Abu Dhabi<br>Abu Dhabi, United Arab Emirates</p>
       </div>
-      <div class="job-body">
-        <ul>
-          <li>Research Engineer at the Public Health Research Center (PHRC).</li>
-          <li>Lead Developer of <b>OmiχLIMS</b>.</li>
-          <li>Multi-omics data analysis and pipeline development.</li>
-        </ul>
-      </div>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="CV.pdf">CV</a></li>
+      </ul>
+      <p class="footer-note">Personal website. Not an official page of NYU Abu Dhabi.</p>
     </div>
-
-    <div class="job-box">
-      <div class="job-titlebar">
-        <span class="job-role">Bioinformatician @ Prepaire</span>
-        <span class="job-dates">Nov 2022 &ndash; Jan 2025</span>
-      </div>
-      <div class="job-body">
-        <ul>
-          <li>Curated multi-omic databases by systematically annotating and validating personalized biological datasets.</li>
-          <li>Handled genomic, transcriptomic, proteomic, and metabolomic information integration.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="job-box">
-      <div class="job-titlebar">
-        <span class="job-role">Biomedical Engineer @ Freelance</span>
-        <span class="job-dates">Apr 2020 &ndash; Oct 2022</span>
-      </div>
-      <div class="job-body">
-        <ul>
-          <li>Executed projects in FMRI &amp; EEG convolution and biomechanical simulations.</li>
-          <li>Conducted pitch analysis in speech processing.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="job-box">
-      <div class="job-titlebar">
-        <span class="job-role">Project Coordinator @ Institute of Bioengineering</span>
-        <span class="job-dates">Jan 2019 &ndash; Dec 2020</span>
-      </div>
-      <div class="job-body">
-        <ul>
-          <li>Led a team in multi-modal spectroscopy ML applications for urinalysis.</li>
-          <li>Created a detailed catalogue of urine constituents.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="job-box">
-      <div class="job-titlebar">
-        <span class="job-role">Research Technician &amp; Assistant @ FH Aachen</span>
-        <span class="job-dates">June 2019 &ndash; Aug 2019</span>
-      </div>
-      <div class="job-body">
-        <ul>
-          <li>Calibrated and maintained ophthalmological devices.</li>
-          <li>Conducted finite element analysis to study and replicate stress behavior of kyphotic vertebrae.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="job-box">
-      <div class="job-titlebar">
-        <span class="job-role">Professor's Assistant @ FH Aachen</span>
-        <span class="job-dates">June 2015 &ndash; Dec 2020</span>
-      </div>
-      <div class="job-body">
-        <ul>
-          <li>Prepared and lectured in various subjects, including Calculus I/II, Information Processing, German, and Biomolecular Physics.</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-
-  <hr>
-
-  <!-- Education -->
-  <h2 id="education">2. Education</h2>
-  <table class="data">
-    <tr>
-      <th>Degree</th>
-      <th>Institution</th>
-      <th>GPA (Note)</th>
-      <th>Focus</th>
-    </tr>
-    <tr>
-      <td><b>MSc Biomedical Engineering</b></td>
-      <td>FH Aachen, Germany</td>
-      <td>3.6 (1.7)</td>
-      <td>Medical Physics &amp; Bioinformatics</td>
-    </tr>
-    <tr>
-      <td><b>BEng Biomedical Engineering</b></td>
-      <td>FH Aachen, Germany</td>
-      <td>3.2 (2.3)</td>
-      <td>Medical Instrumentation &amp; Signal Processing</td>
-    </tr>
-  </table>
-
-  <hr>
-
-  <!-- Skills -->
-  <h2 id="skills">3. Skills</h2>
-
-  <div class="skills-grid">
-
-    <div class="skill-box">
-      <div class="skill-box-title">Languages</div>
-      <div class="skill-chips">
-        <span class="badge">PHP</span>
-        <span class="badge">Python</span>
-        <span class="badge">Bash</span>
-        <span class="badge">C/C++</span>
-        <span class="badge">MATLAB</span>
-        <span class="badge">R</span>
-        <span class="badge">SQL</span>
-      </div>
-    </div>
-
-    <div class="skill-box">
-      <div class="skill-box-title">Databases &amp; Architecture</div>
-      <div class="skill-chips">
-        <span class="badge">PostgreSQL</span>
-        <span class="badge">MySQL</span>
-        <span class="badge">LAMP/LAPP</span>
-        <span class="badge">MVC</span>
-      </div>
-    </div>
-
-    <div class="skill-box">
-      <div class="skill-box-title">Machine Learning</div>
-      <div class="skill-chips">
-        <span class="badge">TensorFlow</span>
-        <span class="badge">PyTorch</span>
-        <span class="badge">Scikit-learn</span>
-        <span class="badge">Pandas</span>
-        <span class="badge">NumPy</span>
-        <span class="badge">Deep Neural Nets</span>
-        <span class="badge">Multivariate Analysis</span>
-        <span class="badge">Self-Organizing Maps</span>
-      </div>
-    </div>
-
-    <div class="skill-box">
-      <div class="skill-box-title">Bioinformatics</div>
-      <div class="skill-chips">
-        <span class="badge">Multi-omics</span>
-        <span class="badge">NGS</span>
-        <span class="badge">Pipelines</span>
-        <span class="badge">Genomics</span>
-        <span class="badge">Transcriptomics</span>
-        <span class="badge">Proteomics</span>
-        <span class="badge">Metabolomics</span>
-      </div>
-    </div>
-
-    <div class="skill-box">
-      <div class="skill-box-title">Optical Spectroscopy</div>
-      <div class="skill-chips">
-        <span class="badge">Fluorescence</span>
-        <span class="badge">Absorption</span>
-        <span class="badge">EEM</span>
-        <span class="badge">Multi-modal</span>
-        <span class="badge">Applied ML</span>
-        <span class="badge">Biomedical Samples</span>
-      </div>
-    </div>
-
-    <div class="skill-box">
-      <div class="skill-box-title">Tools</div>
-      <div class="skill-chips">
-        <span class="badge">Git</span>
-        <span class="badge">Linux</span>
-        <span class="badge">Docker</span>
-        <span class="badge">LaTeX</span>
-      </div>
-    </div>
-
-  </div>
-
-  <hr>
-
-  <!-- Contact -->
-  <h2 id="contact">4. Get In Touch</h2>
-
-  <p>
-    <b>Email:</b> <a href="mailto:fouad.azar@live.com">fouad.azar@live.com</a><br>
-    <b>GitHub:</b> <a href="https://github.com/FouadAIAzar" target="_blank">github.com/FouadAIAzar</a><br>
-    <b>LinkedIn:</b> <a href="https://linkedin.com/in/fouad-a-i-azar" target="_blank">linkedin.com/in/fouad-a-i-azar</a>
-  </p>
-
-  <p class="signature">
-    -- <br>
-    Fouad A. I. Azar<br>
-    fouad.azar@live.com<br>
-    "I do this because I'm bored."<br>
-  </p>
+  </footer>
 
   <script>
     (function () {
-      var canvas = document.getElementById('pixel-portrait');
-      if (!canvas || !canvas.getContext) return;
-      var ctx = canvas.getContext('2d');
-      var OUT = 180;
-      var PIX = 256;
+      var tabs = document.querySelectorAll('[data-tab]');
+      var panels = document.querySelectorAll('.panel');
+      var ids = Array.prototype.map.call(panels, function (p) { return p.id; });
+      document.documentElement.classList.add('js');
 
-      ctx.fillStyle = '#c0c0c0';
-      ctx.fillRect(0, 0, OUT, OUT);
-
-      var img = new Image();
-      img.onload = function () {
-        var s = Math.min(img.naturalWidth, img.naturalHeight);
-        var sx = (img.naturalWidth  - s) / 2;
-        var sy = (img.naturalHeight - s) / 2;
-
-        var tmp = document.createElement('canvas');
-        tmp.width = PIX;
-        tmp.height = PIX;
-        var tctx = tmp.getContext('2d');
-        tctx.imageSmoothingEnabled = true;
-        tctx.drawImage(img, sx, sy, s, s, 0, 0, PIX, PIX);
-
-        ctx.imageSmoothingEnabled = false;
-        ctx.mozImageSmoothingEnabled = false;
-        ctx.webkitImageSmoothingEnabled = false;
-        ctx.msImageSmoothingEnabled = false;
-
-        // Old-school interlaced GIF / progressive PNG reveal:
-        // Adam7-ish 4-pass scan. First pass paints every 8th row as a fat
-        // 8-tall band, so you immediately see chunky horizontal stripes;
-        // each subsequent pass slots in between, halving the stripe height.
-        function drawBand(oy, h) {
-          if (oy >= OUT) return;
-          var srcY = Math.floor(oy * PIX / OUT);
-          var hh = Math.min(h, OUT - oy);
-          ctx.drawImage(tmp, 0, srcY, PIX, 1, 0, oy, OUT, hh);
-        }
-
-        // Each pass has a delay range (min/max ms per row). Every tick we
-        // roll a fresh random delay so the painting jitters like a real
-        // dial-up connection. Occasionally we add a "packet stall" spike
-        // where the load just sits there for a beat. Result: different
-        // load animation every page view, but never too snappy.
-        var passes = [
-          { step: 8, offset: 0, height: 8, min: 60,  max: 180 },
-          { step: 8, offset: 4, height: 4, min: 45,  max: 140 },
-          { step: 4, offset: 2, height: 2, min: 30,  max: 110 },
-          { step: 2, offset: 1, height: 1, min: 20,  max: 80  }
-        ];
-
-        function jitter(min, max) {
-          var d = min + Math.random() * (max - min);
-          // ~12% chance of a noticeable slowdown (2x - 5x)
-          if (Math.random() < 0.12) d *= 2 + Math.random() * 3;
-          // ~5% chance of a packet hiccup (400 - 1200ms freeze)
-          if (Math.random() < 0.05) d += 400 + Math.random() * 800;
-          // ~1.5% chance of a full modem stall (1.5 - 3.5s)
-          if (Math.random() < 0.015) d += 1500 + Math.random() * 2000;
-          return d;
-        }
-
-        function runPass(p) {
-          if (p >= passes.length) return;
-          var pass = passes[p];
-          var oy = pass.offset;
-          (function step() {
-            if (oy >= OUT) { runPass(p + 1); return; }
-            drawBand(oy, pass.height);
-            oy += pass.step;
-            setTimeout(step, jitter(pass.min, pass.max));
-          })();
-        }
-        runPass(0);
-      };
-      img.onerror = function () {
-        ctx.fillStyle = '#000';
-        ctx.font = '12px "Courier New", monospace';
-        ctx.fillText('[image missing]', 30, 90);
-      };
-      img.src = './images/me.jpg';
-    })();
-  </script>
-
-  <!-- Fake pop-up ad -->
-  <div id="popup-ad" class="window" style="display:none; position:fixed; z-index:9999; width:340px;">
-    <div class="title-bar">
-      <div class="title-bar-text">!!! IMPORTANT MESSAGE !!!</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close" id="popup-close-btn"></button>
-      </div>
-    </div>
-    <div class="window-body ad-body">
-      <div class="ad-flash">
-        <div class="ad-stars">&#9733;&#9733;&#9733; CONGRATULATIONS &#9733;&#9733;&#9733;</div>
-        <div class="ad-main-text">YOU HAVE BEEN<br>SELECTED!!!</div>
-        <div class="ad-sub">Fouad Azar is NOW HIRING<br>your attention!!</div>
-        <div class="ad-blink">&#9658; ACT NOW &#9664;</div>
-        <div class="ad-links">
-          <a class="ad-btn" href="https://linkedin.com/in/fouad-a-i-azar" target="_blank">&#128100; LINKEDIN PROFILE</a>
-          <a class="ad-btn" href="https://github.com/FouadAIAzar" target="_blank">&#128187; GITHUB PAGE</a>
-        </div>
-        <div class="ad-fine">* This offer expires when you close this window *<br>* and then reappears *</div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    (function () {
-      var ad = document.getElementById('popup-ad');
-      var titlebar = ad.querySelector('.title-bar');
-
-      var AD_WIDTH = 340;
-      var AD_HEIGHT_EST = 320;
-      var BODY_WIDTH = 800;
-      var GUTTER = 12;
-      var MOBILE_BREAKPOINT = 900;
-
-      function respawn() {
-        var winW = window.innerWidth;
-        var winH = window.innerHeight;
-
-        // Side margins around the centered 800px body column.
-        var sideSpace = (winW - BODY_WIDTH) / 2;
-        if (winW < MOBILE_BREAKPOINT || sideSpace < AD_WIDTH + GUTTER * 2) {
-          // Not enough room beside the body — skip this pop.
-          return;
-        }
-
-        // Pick a side at random.
-        var onLeft = Math.random() < 0.5;
-        var minX, maxX;
-        if (onLeft) {
-          minX = GUTTER;
-          maxX = sideSpace - AD_WIDTH - GUTTER;
-        } else {
-          minX = sideSpace + BODY_WIDTH + GUTTER;
-          maxX = winW - AD_WIDTH - GUTTER;
-        }
-
-        var maxY = Math.max(GUTTER, winH - AD_HEIGHT_EST - GUTTER);
-        ad.style.left = Math.floor(minX + Math.random() * Math.max(0, maxX - minX)) + 'px';
-        ad.style.top  = Math.floor(GUTTER + Math.random() * (maxY - GUTTER)) + 'px';
-        ad.style.display = 'block';
+      function show(id, focus) {
+        if (ids.indexOf(id) === -1) id = 'about';
+        panels.forEach(function (p) { p.hidden = p.id !== id; });
+        tabs.forEach(function (t) {
+          var on = t.getAttribute('data-tab') === id;
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+          if (on) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
+        });
+        if (focus) document.querySelector('.tabbar').scrollIntoView({ block: 'start' });
       }
 
-      document.getElementById('popup-close-btn').onclick = function () {
-        ad.style.display = 'none';
-      };
-
-      // Drag by title bar
-      var dragX, dragY, dragging = false;
-
-      titlebar.addEventListener('mousedown', function (e) {
-        if (e.target.id === 'popup-close-btn') return;
-        dragging = true;
-        dragX = e.clientX - ad.offsetLeft;
-        dragY = e.clientY - ad.offsetTop;
-        titlebar.style.cursor = 'grabbing';
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        var id = a.getAttribute('href').slice(1);
+        if (ids.indexOf(id) === -1) return;
         e.preventDefault();
+        history.replaceState(null, '', '#' + id);
+        show(id, !a.hasAttribute('data-tab'));
       });
 
-      document.addEventListener('mousemove', function (e) {
-        if (!dragging) return;
-        ad.style.left = (e.clientX - dragX) + 'px';
-        ad.style.top  = (e.clientY - dragY) + 'px';
-      });
-
-      document.addEventListener('mouseup', function () {
-        dragging = false;
-        titlebar.style.cursor = 'default';
-      });
-
-      var delay = 3000 + Math.random() * 7000;
-      setTimeout(respawn, delay);
+      window.addEventListener('hashchange', function () { show(location.hash.slice(1)); });
+      show(location.hash.slice(1));
     })();
   </script>
-
 </body>
 </html>
