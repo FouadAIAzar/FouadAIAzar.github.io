@@ -4,282 +4,383 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fouad A. I. Azar | Research Engineer</title>
-  <meta name="description" content="Fouad A. I. Azar, Research Engineer at the Public Health Research Center, NYU Abu Dhabi. Bioinformatics, multi-omics databases, machine learning and optical spectroscopy.">
+  <title>Fouad Azar | About | Public Health Research Center</title>
+  <meta name="description" content="Fouad Azar, Research Engineer at the Public Health Research Center, NYU Abu Dhabi. Bioinformatics, multi-omics databases, machine learning and optical spectroscopy.">
   <meta name="keywords" content="fouad, azar, bioinformatics, biomedical, engineering, multi-omics, PHRC, NYU Abu Dhabi">
   <meta name="author" content="Fouad A. I. Azar">
-  <meta name="theme-color" content="#57068c">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1720" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- Slim brand bar -->
-  <header class="brand-bar">
-    <div class="wrap brand-inner">
-      <a class="brand" href="./">
-        <img src="images/phrc-logo.png" alt="" width="40" height="36">
-        <span class="brand-text">
-          <span class="brand-name">Public Health Research Center</span>
-          <span class="brand-sub">NYU Abu Dhabi</span>
-        </span>
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-badge" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 17c.7-1.9 2-2.8 3.5-2.8s2.8.9 3.5 2.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.1-6.5-11.2A6.5 6.5 0 0 1 18.5 9.8C18.5 14.9 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.8" r="2.3" fill="currentColor"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="M20 11.5 12.2 19.3a5 5 0 0 1-7.1-7.1l8.1-8.1a3.4 3.4 0 0 1 4.8 4.8l-8 8a1.7 1.7 0 0 1-2.4-2.4l7.3-7.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 3v5h5M10 13h6M10 17h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-net" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4" fill="currentColor"/><circle cx="4.5" cy="5.5" r="1.8" fill="currentColor"/><circle cx="19.5" cy="5.5" r="1.8" fill="currentColor"/><circle cx="5" cy="19" r="1.8" fill="currentColor"/><circle cx="19" cy="18.5" r="1.8" fill="currentColor"/><path d="M6 7l4.3 3.4M18 7l-4.3 3.4M6.4 17.6l4-3.6M17.6 17.2l-3.8-3.4" stroke="currentColor" stroke-width="1.5"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 20c.8-3.6 3.4-5.6 6.5-5.6 1.4 0 2.6.4 3.6 1.1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="m14 20 .5-2.5 5.5-5.5 2 2-5.5 5.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  </svg>
+
+  <!-- Top bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./">
+        <picture>
+          <source srcset="images/phrc-wordmark-white.png" media="(prefers-color-scheme: dark)">
+          <img src="images/phrc-wordmark.png" alt="PHRC NYUAD, Public Health Research Center" width="1678" height="528">
+        </picture>
       </a>
-      <a class="brand-cv" href="CV.pdf">Download CV</a>
     </div>
   </header>
 
-  <!-- Identity block -->
-  <section class="identity">
-    <div class="wrap identity-inner">
-      <img class="portrait" src="images/me.jpg" alt="Portrait of Fouad A. I. Azar" width="148" height="148">
-      <div class="identity-text">
-        <h1>Fouad A. I. Azar</h1>
-        <p class="position">Research Engineer</p>
-        <p class="dept">Public Health Research Center &middot; NYU Abu Dhabi</p>
-        <p class="loc">Abu Dhabi, United Arab Emirates</p>
-      </div>
+  <!-- Back link + tabs -->
+  <div class="container layout-grid nav-row">
+    <div class="back-cell">
+      <a class="back-link" href="https://github.com/FouadAIAzar" target="_blank" rel="noopener">&larr; github profile</a>
     </div>
-  </section>
-
-  <!-- Tab bar -->
-  <nav class="tabbar" aria-label="Profile sections">
-    <div class="wrap">
+    <nav class="tab-menu" aria-label="Profile sections">
       <ul role="tablist">
         <li><a role="tab" href="#about" data-tab="about">About</a></li>
         <li><a role="tab" href="#experience" data-tab="experience">Experience</a></li>
         <li><a role="tab" href="#education" data-tab="education">Education</a></li>
-        <li><a role="tab" href="#skills" data-tab="skills">Skills</a></li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </div>
 
-  <div class="wrap layout">
+  <div class="container layout-grid">
+
+    <!-- Sidebar hero card -->
+    <aside class="hero-area">
+      <div class="hero">
+        <div class="hero-details">
+          <img class="avatar" src="images/me.jpg" alt="Portrait of Fouad Azar" width="154" height="154">
+          <span class="hero-title">Eng.</span>
+          <h1>Fouad Azar</h1>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-group">
+          <div class="info-row">
+            <span class="ic"><svg><use href="#i-badge"/></svg></span>
+            <div>
+              <div class="info-strong">Research Engineer</div>
+              <div class="info-light">Bioinformatician in Multi-Omics</div>
+              <div class="info-light">Public Health Research Center - NYU Abu Dhabi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-group">
+          <div class="info-row">
+            <span class="ic"><svg><use href="#i-mail"/></svg></span>
+            <div><a href="mailto:fa3033@nyu.edu">fa3033@nyu.edu</a></div>
+          </div>
+          <div class="info-row">
+            <span class="ic"><svg><use href="#i-pin"/></svg></span>
+            <div>Abu Dhabi,<br>United Arab Emirates</div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-group">
+          <div class="info-row">
+            <span class="ic"><svg><use href="#i-doc"/></svg></span>
+            <div><a href="CV.pdf">Curriculum vitae (PDF)</a></div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="info-group">
+          <div class="info-row">
+            <span class="ic"><svg><use href="#i-clip"/></svg></span>
+            <div><a href="https://github.com/FouadAIAzar" target="_blank" rel="noopener">GitHub <svg class="ext"><use href="#i-ext"/></svg></a></div>
+          </div>
+          <div class="info-row">
+            <span class="ic"><svg><use href="#i-clip"/></svg></span>
+            <div><a href="https://linkedin.com/in/fouad-a-i-azar" target="_blank" rel="noopener">LinkedIn <svg class="ext"><use href="#i-ext"/></svg></a></div>
+          </div>
+        </div>
+
+        <a class="ribbon" href="mailto:fa3033@nyu.edu">
+          <svg class="ribbon-ic"><use href="#i-user"/></svg>
+          <span>
+            <span class="ribbon-strong">Open to PhD positions</span>
+            <span class="ribbon-link">Get in touch</span>
+          </span>
+        </a>
+      </div>
+    </aside>
 
     <main id="main">
 
       <!-- ABOUT -->
       <section class="panel" id="about" role="tabpanel">
-        <h2>Bio</h2>
-        <p><span class="runin">Research:</span> I am a biomedical engineer and bioinformatician working on
-          multi-omics databases, machine learning and optical spectroscopy. At NYU Abu Dhabi's Public
-          Health Research Center I lead development of <b>Omi&chi;LIMS</b>, the laboratory information
-          management system behind the centre's sample and study data.</p>
-        <p><span class="runin">Approach:</span> My work sits between the lab and the data: building the
-          databases, pipelines and analysis tooling that take genomic, transcriptomic, proteomic and
-          metabolomic measurements from collection through to integrated, analysable datasets.</p>
-        <p><span class="runin">Background:</span> I trained in biomedical engineering at FH Aachen, Germany
-          (BEng, MSc), with a focus on medical physics, signal processing and bioinformatics. Before
-          joining PHRC I curated multi-omic databases as a bioinformatician at Prepaire, and coordinated
-          multi-modal spectroscopy and machine-learning work for urinalysis at the Institute of
-          Bioengineering.</p>
+        <div class="box">
+          <h2 class="box-head">Bio</h2>
+          <div class="box-body">
+            <p>I am a Research Engineer and bioinformatician in multi-omics at the Public Health Research Center (PHRC), NYU Abu Dhabi.</p>
+            <p>Research:<br>I develop and maintain the laboratory information management system for participant visits, biospecimen tracking and biobank inventory, and I analyse serum metabolomics data from the UAE Healthy Future Study to investigate metabolic syndrome and polycystic ovary syndrome.</p>
+            <p>Approaches:<br>I build reproducible R workflows for differential abundance, metabolite ratios and network analysis, and I work across machine learning, multivariate statistics, and optical, fluorescence and NMR spectroscopy. I also coordinate assay planning and clinical data linkage with cohort investigators.</p>
+            <p>Biosketch:<br>I studied Biomedical Engineering at FH Aachen University of Applied Sciences in J&uuml;lich, Germany (B.Eng., M.Sc.). I coordinated the FLURINE multimodal spectroscopy project at the Institute of Bioengineering, worked as a self-employed biomedical engineer and full-stack developer, and curated multi-omics datasets as a bioinformatician at Prepaire before joining PHRC in 2025.</p>
+          </div>
+        </div>
 
-        <h2>Organisation</h2>
-        <ul class="plain">
-          <li>Public Health Research Center, NYU Abu Dhabi</li>
-        </ul>
+        <div class="box">
+          <h2 class="box-head">Organisation</h2>
+          <div class="box-body">
+            <ul class="sq">
+              <li>Public Health Research Center, NYU Abu Dhabi</li>
+            </ul>
+          </div>
+        </div>
 
-        <h2>Position</h2>
-        <ul class="plain">
-          <li>Research Engineer</li>
-        </ul>
+        <div class="box">
+          <h2 class="box-head">Position name</h2>
+          <div class="box-body">
+            <ul class="sq">
+              <li>Research Engineer / Bioinformatician in Multi-Omics</li>
+            </ul>
+          </div>
+        </div>
 
-        <h2>Fields of research</h2>
-        <ul class="fields">
-          <li>Bioinformatics</li>
-          <li>Multi-omics data integration</li>
-          <li>Laboratory information management</li>
-          <li>Machine learning</li>
-          <li>Optical spectroscopy</li>
-          <li>Biomedical signal processing</li>
-          <li>Next-generation sequencing</li>
-          <li>Public health research</li>
-        </ul>
+        <div class="box">
+          <h2 class="box-head">Fields of research</h2>
+          <div class="box-body">
+            <ul class="tags">
+              <li>Multi-omics</li>
+              <li>Metabolomics</li>
+              <li>Bioinformatics</li>
+              <li>Biostatistics</li>
+              <li>Machine learning</li>
+              <li>Laboratory information systems</li>
+              <li>Biobank management</li>
+              <li>Optical spectroscopy</li>
+              <li>NMR spectroscopy</li>
+              <li>Biomedical signal processing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2 class="box-head">Skills</h2>
+          <div class="box-body">
+            <p class="tag-label">Bioinformatics &amp; multi-omics</p>
+            <ul class="tags">
+              <li>Genomics</li><li>Transcriptomics</li><li>Proteomics</li><li>Metabolomics</li><li>Lipidomics</li>
+              <li>Systems biology</li><li>Next-generation sequencing</li><li>Genetic data analysis</li>
+            </ul>
+            <p class="tag-label">Biostatistics &amp; computational analysis</p>
+            <ul class="tags">
+              <li>Statistical analysis</li><li>Multivariate analysis</li><li>Regression analysis</li><li>Machine learning</li>
+              <li>Deep learning</li><li>Predictive modelling</li><li>Cluster analysis</li><li>Network analysis</li>
+              <li>Statistical modelling</li><li>Data visualisation</li>
+            </ul>
+            <p class="tag-label">Programming &amp; scientific computing</p>
+            <ul class="tags">
+              <li>Python</li><li>R</li><li>Bioconductor</li><li>MATLAB</li><li>C/C++</li><li>JavaScript</li>
+              <li>Linux shell scripting</li><li>Docker</li><li>Django</li><li>TensorFlow</li><li>PyTorch</li>
+              <li>scikit-learn</li><li>pandas</li><li>NumPy</li><li>Matplotlib</li>
+            </ul>
+            <p class="tag-label">Database management &amp; data engineering</p>
+            <ul class="tags">
+              <li>SQL</li><li>PostgreSQL</li><li>Database design</li><li>Data modelling</li><li>Data integration</li>
+              <li>Data curation</li><li>Data quality &amp; validation</li><li>Data warehousing</li><li>Laboratory information systems</li>
+            </ul>
+            <p class="tag-label">Biomedical engineering &amp; laboratory research</p>
+            <ul class="tags">
+              <li>Optical spectroscopy</li><li>NMR spectroscopy</li><li>Urinalysis</li><li>Haematology</li>
+              <li>Finite element methods</li><li>Biomedical signal processing</li><li>Laboratory analysis</li><li>Biobank management</li>
+            </ul>
+            <p class="tag-label">Research &amp; scientific communication</p>
+            <ul class="tags">
+              <li>Scientific research</li><li>Project management</li><li>Scientific writing</li><li>Teaching and training</li>
+              <li>International cooperation</li><li>Technical reports</li><li>Team leadership</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2 class="box-head">Languages</h2>
+          <div class="box-body">
+            <ul class="sq">
+              <li>English &ndash; mother tongue</li>
+              <li>Arabic &ndash; mother tongue</li>
+              <li>German &ndash; C2 (proficient)</li>
+              <li>Mandarin Chinese &ndash; B1 (independent)</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- EXPERIENCE -->
       <section class="panel" id="experience" role="tabpanel">
-        <h2>Experience</h2>
-        <ol class="entries">
-          <li>
-            <div class="entry-head">
-              <span class="entry-title">Research Engineer</span>
-              <span class="entry-date">Feb 2025 &ndash; Present</span>
-            </div>
-            <div class="entry-org">Public Health Research Center, NYU Abu Dhabi</div>
-            <ul>
-              <li>Lead developer of <b>Omi&chi;LIMS</b>.</li>
-              <li>Multi-omics data analysis and pipeline development.</li>
-            </ul>
-          </li>
-          <li>
-            <div class="entry-head">
-              <span class="entry-title">Bioinformatician</span>
-              <span class="entry-date">Nov 2022 &ndash; Jan 2025</span>
-            </div>
-            <div class="entry-org">Prepaire</div>
-            <ul>
-              <li>Curated multi-omic databases by systematically annotating and validating personalised biological datasets.</li>
-              <li>Integrated genomic, transcriptomic, proteomic and metabolomic information.</li>
-            </ul>
-          </li>
-          <li>
-            <div class="entry-head">
-              <span class="entry-title">Biomedical Engineer</span>
-              <span class="entry-date">Apr 2020 &ndash; Oct 2022</span>
-            </div>
-            <div class="entry-org">Freelance</div>
-            <ul>
-              <li>fMRI and EEG convolution projects and biomechanical simulations.</li>
-              <li>Pitch analysis in speech processing.</li>
-            </ul>
-          </li>
-          <li>
-            <div class="entry-head">
-              <span class="entry-title">Project Coordinator</span>
-              <span class="entry-date">Jan 2019 &ndash; Dec 2020</span>
-            </div>
-            <div class="entry-org">Institute of Bioengineering</div>
-            <ul>
-              <li>Led a team on multi-modal spectroscopy and machine-learning applications for urinalysis.</li>
-              <li>Created a detailed catalogue of urine constituents.</li>
-            </ul>
-          </li>
-          <li>
-            <div class="entry-head">
-              <span class="entry-title">Research Technician &amp; Research Assistant</span>
-              <span class="entry-date">Jun 2019 &ndash; Aug 2019</span>
-            </div>
-            <div class="entry-org">FH Aachen</div>
-            <ul>
-              <li>Calibrated and maintained ophthalmological devices.</li>
-              <li>Finite element analysis of stress behaviour in kyphotic vertebrae.</li>
-            </ul>
-          </li>
-          <li>
-            <div class="entry-head">
-              <span class="entry-title">Professor's Assistant</span>
-              <span class="entry-date">Jun 2015 &ndash; Dec 2020</span>
-            </div>
-            <div class="entry-org">FH Aachen</div>
-            <ul>
-              <li>Prepared and taught Calculus I/II, Information Processing, German and Biomolecular Physics.</li>
-            </ul>
-          </li>
-        </ol>
+        <div class="box">
+          <div class="list-head">
+            <h2 class="box-head">Work experience</h2>
+            <span class="count">1-5 out of 5</span>
+          </div>
+          <div class="box-body list-body">
+            <article class="item">
+              <p class="item-type">Employment</p>
+              <h3 class="item-title">Research Engineer</h3>
+              <p class="item-meta">Feb 2025 &ndash; Present <i>&bull;</i> New York University Abu Dhabi, Public Health Research Center <i>&bull;</i> Abu Dhabi, United Arab Emirates</p>
+              <ul class="item-points">
+                <li>Develop and maintain the laboratory information management system for participant visits, biospecimen tracking and biobank inventory.</li>
+                <li>Led the migration of records for approximately 15,000 participants and 350,000 biospecimen tubes.</li>
+                <li>Analyse serum metabolomics data from the UAE Healthy Future Study to investigate metabolic syndrome and polycystic ovary syndrome.</li>
+                <li>Build reproducible R workflows for differential abundance, metabolite ratios and network analysis.</li>
+                <li>Coordinate assay planning and clinical data linkage with cohort investigators.</li>
+              </ul>
+            </article>
+            <article class="item">
+              <p class="item-type">Employment</p>
+              <h3 class="item-title">Bioinformatician</h3>
+              <p class="item-meta">Nov 2022 &ndash; Feb 2025 <i>&bull;</i> Prepaire <i>&bull;</i> Abu Dhabi, United Arab Emirates</p>
+              <ul class="item-points">
+                <li>Curated genomic, transcriptomic, proteomic and metabolomic datasets for personalised multi-omics databases.</li>
+                <li>Standardised annotations and validated records across data sources before downstream analysis.</li>
+              </ul>
+            </article>
+            <article class="item">
+              <p class="item-type">Self-employed</p>
+              <h3 class="item-title">Biomedical Engineer / Full-Stack Developer</h3>
+              <p class="item-meta">Apr 2020 &ndash; Oct 2022 <i>&bull;</i> Self-employed <i>&bull;</i> Abu Dhabi, United Arab Emirates</p>
+              <ul class="item-points">
+                <li>Developed biomedical web applications using PHP, MySQL and PostgreSQL.</li>
+                <li>Worked on fMRI and EEG signal processing, bone tissue simulations and quantitative speech pitch analysis.</li>
+              </ul>
+            </article>
+            <article class="item">
+              <p class="item-type">Employment</p>
+              <h3 class="item-title">Project Coordinator</h3>
+              <p class="item-meta">Jan 2019 &ndash; Dec 2020 <i>&bull;</i> Institute of Bioengineering <i>&bull;</i> J&uuml;lich, Germany</p>
+              <ul class="item-points">
+                <li>Coordinated FLURINE experiments combining multimodal spectroscopy and machine learning for urinalysis.</li>
+                <li>Developed a spectral catalogue of urinary constituents using artificial and human urine samples.</li>
+                <li>Supervised four bachelor's theses on experimental and computational aspects of the project.</li>
+              </ul>
+            </article>
+            <article class="item">
+              <p class="item-type">Teaching</p>
+              <h3 class="item-title">Professor's Assistant</h3>
+              <p class="item-meta">Jun 2015 &ndash; Dec 2020 <i>&bull;</i> FH Aachen University of Applied Sciences <i>&bull;</i> J&uuml;lich, Germany</p>
+              <ul class="item-points">
+                <li>Prepared teaching materials for Calculus I and II, Information Processing, Biomolecular Physics and German.</li>
+                <li>Supported undergraduate and postgraduate students with coursework and problem-solving.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </section>
 
       <!-- EDUCATION -->
       <section class="panel" id="education" role="tabpanel">
-        <h2>Education</h2>
-        <ol class="entries">
-          <li>
-            <div class="entry-head">
-              <span class="entry-title">MSc Biomedical Engineering</span>
-              <span class="entry-date">GPA 3.6 (Note 1.7)</span>
-            </div>
-            <div class="entry-org">FH Aachen, Germany</div>
-            <ul>
-              <li>Specialised in medical physics and bioinformatics.</li>
-            </ul>
-          </li>
-          <li>
-            <div class="entry-head">
-              <span class="entry-title">BEng Biomedical Engineering</span>
-              <span class="entry-date">GPA 3.2 (Note 2.3)</span>
-            </div>
-            <div class="entry-org">FH Aachen, Germany</div>
-            <ul>
-              <li>Focus on medical instrumentation and signal processing.</li>
-            </ul>
-          </li>
-        </ol>
-      </section>
-
-      <!-- SKILLS -->
-      <section class="panel" id="skills" role="tabpanel">
-        <h2>Languages</h2>
-        <ul class="fields">
-          <li>PHP</li><li>Python</li><li>R</li><li>SQL</li><li>Bash</li><li>C/C++</li><li>MATLAB</li>
-        </ul>
-        <h2>Databases &amp; architecture</h2>
-        <ul class="fields">
-          <li>PostgreSQL</li><li>MySQL</li><li>LAMP / LAPP</li><li>MVC</li>
-        </ul>
-        <h2>Machine learning</h2>
-        <ul class="fields">
-          <li>TensorFlow</li><li>PyTorch</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li>
-          <li>Deep neural networks</li><li>Multivariate analysis</li><li>Self-organising maps</li>
-        </ul>
-        <h2>Bioinformatics</h2>
-        <ul class="fields">
-          <li>Multi-omics</li><li>NGS</li><li>Pipelines</li><li>Genomics</li>
-          <li>Transcriptomics</li><li>Proteomics</li><li>Metabolomics</li>
-        </ul>
-        <h2>Optical spectroscopy</h2>
-        <ul class="fields">
-          <li>Fluorescence</li><li>Absorption</li><li>EEM</li><li>Multi-modal</li>
-        </ul>
-        <h2>Tools</h2>
-        <ul class="fields">
-          <li>Git</li><li>Linux</li><li>Docker</li><li>LaTeX</li>
-        </ul>
+        <div class="box">
+          <div class="list-head">
+            <h2 class="box-head">Education and training</h2>
+            <span class="count">1-2 out of 2</span>
+          </div>
+          <div class="box-body list-body">
+            <article class="item">
+              <p class="item-type">Master's degree &middot; EQF level 7</p>
+              <h3 class="item-title">Master of Science (M.Sc.) in Biomedical Engineering</h3>
+              <p class="item-meta">FH Aachen University of Applied Sciences <i>&bull;</i> J&uuml;lich, Germany</p>
+              <ul class="tags item-tags">
+                <li>Machine learning for spectral classification (feedforward neural networks, self-organising maps)</li>
+                <li>Medical statistics and multivariate data analysis</li>
+                <li>Multi-way analysis of fluorescence excitation-emission matrices (PARAFAC)</li>
+                <li>Optical, fluorescence and NMR spectroscopy</li>
+                <li>Urinalysis, urinary metabolite characterisation and haematology</li>
+                <li>Dynamic systems and computer modelling</li>
+                <li>Finite element methods for engineering simulation</li>
+                <li>Computational methods in biomedical engineering</li>
+                <li>Cellular and molecular biophysics</li>
+                <li>Molecular biology and genetics</li>
+                <li>Medical imaging</li>
+                <li>Artificial organs I and II</li>
+                <li>Biomedical engineering in ophthalmology</li>
+                <li>Integrated circuit design</li>
+              </ul>
+            </article>
+            <article class="item">
+              <p class="item-type">Bachelor's degree &middot; EQF level 6</p>
+              <h3 class="item-title">Bachelor of Engineering (B.Eng.) in Biomedical Engineering</h3>
+              <p class="item-meta">FH Aachen University of Applied Sciences <i>&bull;</i> J&uuml;lich, Germany</p>
+              <ul class="tags item-tags">
+                <li>Machine learning for spectral classification (feedforward neural networks, self-organising maps)</li>
+                <li>Biomedical instrumentation and measurement technology</li>
+                <li>Biosensors and biosensor laboratory methods</li>
+                <li>Control and feedback control systems I and II</li>
+                <li>Electrical engineering, electronics and digital electronics</li>
+                <li>Medical computer science and information processing</li>
+                <li>Digital image processing and laboratory methods</li>
+                <li>Scientific computing with MATLAB</li>
+                <li>Engineering mathematics I and II, technical mechanics I and II</li>
+                <li>Machine component design, technical drawing and CAD</li>
+                <li>Materials science and materials testing</li>
+                <li>Physics I and II, medical physics and biophysics</li>
+                <li>Human anatomy and physiology, with laboratory practice</li>
+                <li>Cell biology, chemistry and experimental biochemistry</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </section>
 
     </main>
-
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="side-block" id="contact">
-        <h3>Contact</h3>
-        <dl>
-          <dt>Position</dt>
-          <dd>Research Engineer, Public Health Research Center</dd>
-          <dt>Email</dt>
-          <dd><a href="mailto:fouad.azar@live.com">fouad.azar@live.com</a></dd>
-          <dt>Location</dt>
-          <dd>NYU Abu Dhabi, Saadiyat Island<br>Abu Dhabi, UAE</dd>
-        </dl>
-      </div>
-
-      <div class="side-block">
-        <h3>External links</h3>
-        <ul class="links">
-          <li><a href="https://github.com/FouadAIAzar" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://linkedin.com/in/fouad-a-i-azar" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="CV.pdf">Curriculum vitae (PDF)</a></li>
-        </ul>
-      </div>
-
-      <div class="callout">
-        <p class="callout-title">Open to PhD positions</p>
-        <p>Currently seeking a PhD position in bioinformatics, multi-omics and machine learning.</p>
-        <a class="btn" href="mailto:fouad.azar@live.com">Get in touch</a>
-      </div>
-    </aside>
-
   </div>
 
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div>
-        <p class="footer-name">Fouad A. I. Azar</p>
-        <p>Public Health Research Center, NYU Abu Dhabi<br>Abu Dhabi, United Arab Emirates</p>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo-footer" href="./">
+          <picture>
+            <source srcset="images/phrc-wordmark-white.png" media="(prefers-color-scheme: dark)">
+            <img src="images/phrc-wordmark.png" alt="PHRC NYUAD, Public Health Research Center" width="1678" height="528">
+          </picture>
+        </a>
+        <address>
+          Fouad Azar<br>
+          Public Health Research Center<br>
+          NYU Abu Dhabi<br>
+          Abu Dhabi, United Arab Emirates
+        </address>
+        <ul class="raquo">
+          <li><a href="mailto:fa3033@nyu.edu">fa3033@nyu.edu</a></li>
+        </ul>
       </div>
-      <ul class="footer-links">
+      <ul class="raquo footer-col">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="CV.pdf">CV</a></li>
+        <li><a href="CV.pdf">Curriculum vitae</a></li>
       </ul>
-      <p class="footer-note">Personal website. Not an official page of NYU Abu Dhabi.</p>
+      <ul class="raquo footer-col">
+        <li><a href="https://github.com/FouadAIAzar" target="_blank" rel="noopener">GitHub <svg class="ext"><use href="#i-ext"/></svg></a></li>
+        <li><a href="https://linkedin.com/in/fouad-a-i-azar" target="_blank" rel="noopener">LinkedIn <svg class="ext"><use href="#i-ext"/></svg></a></li>
+        <li><a href="contact.html">Contact card</a></li>
+      </ul>
     </div>
+    <p class="footer-note">Personal website &middot; not an official page of NYU Abu Dhabi</p>
+    <div class="footer-bar"></div>
   </footer>
 
   <script>
@@ -287,17 +388,19 @@
       var tabs = document.querySelectorAll('[data-tab]');
       var panels = document.querySelectorAll('.panel');
       var ids = Array.prototype.map.call(panels, function (p) { return p.id; });
+      var names = { about: 'About', experience: 'Experience', education: 'Education' };
       document.documentElement.classList.add('js');
 
-      function show(id, focus) {
+      function show(id, scroll) {
         if (ids.indexOf(id) === -1) id = 'about';
         panels.forEach(function (p) { p.hidden = p.id !== id; });
         tabs.forEach(function (t) {
           var on = t.getAttribute('data-tab') === id;
           t.setAttribute('aria-selected', on ? 'true' : 'false');
-          if (on) t.setAttribute('aria-current', 'page'); else t.removeAttribute('aria-current');
+          t.classList.toggle('selected', on);
         });
-        if (focus) document.querySelector('.tabbar').scrollIntoView({ block: 'start' });
+        document.title = 'Fouad Azar | ' + names[id] + ' | Public Health Research Center';
+        if (scroll) window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
       document.addEventListener('click', function (e) {
